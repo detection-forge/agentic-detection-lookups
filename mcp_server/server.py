@@ -185,7 +185,9 @@ def list_by_mitre(technique_id: str) -> dict[str, Any]:
     results = []
     for row in _get_lolbas():
         mitre_ids = [m.upper() for m in row.get("mitre_ids", "").split("|") if m]
-        if tid in mitre_ids:
+        # Support hierarchy: T1059 matches T1059, T1059.001, T1059.003, etc.
+        # T1059.001 matches only T1059.001 exactly.
+        if any(m == tid or m.startswith(tid + ".") for m in mitre_ids):
             results.append({
                 "filename": row.get("filename", ""),
                 "binary_name": row.get("binary_name", ""),

@@ -24,7 +24,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "detection-lookups": {
       "command": "python",
-      "args": ["-m", "mcp-server.server"],
+      "args": ["-m", "mcp_server"],
       "cwd": "/path/to/agentic-detection-lookups"
     }
   }

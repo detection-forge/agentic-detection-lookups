@@ -70,10 +70,11 @@ See [`queries/`](queries/) for full query libraries per platform.
 
 ```json
 {
-  "mcpServers": {
+  "servers": {
     "detection-lookups": {
+      "type": "stdio",
       "command": "python",
-      "args": ["-m", "mcp-server.server"],
+      "args": ["-m", "mcp_server"],
       "cwd": "/path/to/agentic-detection-lookups"
     }
   }
@@ -109,17 +110,72 @@ Then your agent can:
 
 ## Installation
 
+### Prerequisites
+- Python 3.10+
+- VS Code with GitHub Copilot (for MCP integration)
+
+### Install
+
 ```bash
 git clone https://github.com/detection-forge/agentic-detection-lookups.git
 cd agentic-detection-lookups
+python -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# Linux/macOS:
+source .venv/bin/activate
 pip install -e .
 ```
 
-### Run MCP server
+### Configure MCP Client (VS Code)
+
+Add to your VS Code User settings (`Ctrl+Shift+P` → "Preferences: Open User Settings (JSON)") or `~/.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "detection-lookups": {
+      "type": "stdio",
+      "command": "/absolute/path/to/.venv/bin/python",
+      "args": ["-m", "mcp_server"],
+      "cwd": "/absolute/path/to/agentic-detection-lookups"
+    }
+  }
+}
+```
+
+> **Windows example:**
+> ```json
+> {
+>   "servers": {
+>     "detection-lookups": {
+>       "type": "stdio",
+>       "command": "C:\\Code\\.venv\\Scripts\\python.exe",
+>       "args": ["-m", "mcp_server"],
+>       "cwd": "C:\\Code\\agentic-detection-lookups"
+>     }
+>   }
+> }
+> ```
+
+Reload VS Code: `Ctrl+Shift+P` → "Reload Window"
+
+### Verify
+
+In Copilot Chat (Agent mode):
+```
+Is certutil.exe a LOLBAS binary?
+```
+
+✅ Returns risk, categories, and MITRE mappings = working!
+
+### Run standalone (CLI)
 
 ```bash
 detection-lookups
 ```
+
+This starts the MCP server on stdio transport (useful for piping JSON-RPC or connecting other MCP clients).
 
 ### Upload to your SIEM
 
@@ -140,9 +196,9 @@ agentic-detection-lookups/
 │   ├── splunk.md
 │   ├── elastic.md
 │   └── microsoft_sentinel.md
-├── mcp-server/                 # MCP server for AI agents
+├── mcp_server/                 # MCP server for AI agents
 │   ├── server.py
-│   └── README.md
+│   └── __init__.py
 ├── scripts/                    # Update/maintenance scripts
 ├── LICENSE                     # Apache 2.0
 ├── NOTICE
