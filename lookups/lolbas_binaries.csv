@@ -1,0 +1,233 @@
+filename,binary_name,primary_path,categories,mitre_ids,risk,description
+acccheckconsole.exe,AccCheckConsole.exe,C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\x86\AccChecker\AccCheckConsole.exe,AWL Bypass|Execute,T1218,high,Verifies UI accessibility requirements
+addinutil.exe,AddinUtil.exe,C:\Windows\Microsoft.NET\Framework\v4.0.30319\AddinUtil.exe,Execute,T1218,high,.NET Tool used for updating cache files for Microsoft Office Add-Ins.
+adplus.exe,adplus.exe,C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\adplus.exe,Dump|Execute,T1003.001|T1127,high,Debugging tool included with Windows Debugging Tools
+advpack.dll,Advpack.dll,c:\windows\system32\advpack.dll,AWL Bypass|Execute,T1218.011,high,Utility for installing software and drivers with rundll32.exe
+agentexecutor.exe,AgentExecutor.exe,C:\Program Files (x86)\Microsoft Intune Management Extension\AgentExecutor.exe,Execute,T1218,high,Intune Management Extension included on Intune Managed Devices
+appcert.exe,AppCert.exe,C:\Program Files (x86)\Windows Kits\10\App Certification Kit\appcert.exe,Execute,T1127|T1218.007,high,Windows App Certification Kit command-line tool.
+appinstaller.exe,AppInstaller.exe,C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.11.2521.0_x64__8wekyb3d8bbwe\AppInstaller.exe,Download,T1105,medium,Tool used for installation of AppX/MSIX applications on Windows 10
+applauncher.exe,AppLauncher.exe,C:\Program Files\Windows Kits\10\Microsoft User Experience Virtualization\Management\AppLauncher.exe,Execute,T1127,high,User Experience Virtualization tool that launches applications under monitoring to capture and synchronize user settings.
+appvlp.exe,Appvlp.exe,C:\Program Files\Microsoft Office\root\client\appvlp.exe,Execute,T1218,high,Application Virtualization Utility Included with Microsoft Office 2016
+aspnet_compiler.exe,Aspnet_Compiler.exe,c:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_compiler.exe,AWL Bypass,T1127,high,ASP.NET Compilation Tool
+at.exe,At.exe,C:\WINDOWS\System32\At.exe,Execute,T1053.002,high,Schedule periodic tasks
+atbroker.exe,Atbroker.exe,C:\Windows\System32\Atbroker.exe,Execute,T1218,high,Helper binary for Assistive Technology (AT)
+bash.exe,Bash.exe,C:\Windows\System32\bash.exe,AWL Bypass|Execute,T1202|T1218,high,File used by Windows subsystem for Linux
+bcp.exe,Bcp.exe,C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\bcp.exe,Download,T1105,medium,Microsoft SQL Server Bulk Copy Program utility for importing and exporting data between SQL Server instances and data files.
+bginfo.exe,Bginfo.exe,no default,AWL Bypass|Execute,T1218,high,Background Information Utility included with SysInternals Suite
+bitsadmin.exe,Bitsadmin.exe,C:\Windows\System32\bitsadmin.exe,ADS|Copy|Download|Execute,T1105|T1218|T1564.004,high,Used for managing background intelligent transfer
+cdb.exe,Cdb.exe,C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\cdb.exe,Execute,T1127,high,Debugging tool included with Windows Debugging Tools.
+certoc.exe,CertOC.exe,c:\windows\system32\certoc.exe,Download|Execute,T1105|T1218,high,Used for installing certificates
+certreq.exe,CertReq.exe,C:\Windows\System32\certreq.exe,Download|Upload,T1105,medium,Used for requesting and managing certificates
+certutil.exe,Certutil.exe,C:\Windows\System32\certutil.exe,ADS|Decode|Download|Encode,T1027.013|T1105|T1140|T1564.004,medium,Windows binary used for handling certificates
+change.exe,Change.exe,c:\windows\system32\change.exe,Execute,T1218,high,Remote Desktop Services MultiUser Change Utility
+cipher.exe,Cipher.exe,c:\windows\system32\cipher.exe,Tamper,T1485|T1562,low,File Encryption Utility
+cl_invocation.ps1,CL_Invocation.ps1,C:\Windows\diagnostics\system\AERO\CL_Invocation.ps1,Execute,T1216,high,Aero diagnostics script
+cl_loadassembly.ps1,CL_LoadAssembly.ps1,C:\Windows\diagnostics\system\Audio\CL_LoadAssembly.ps1,Execute,T1216,high,PowerShell Diagnostic Script
+cl_mutexverifiers.ps1,CL_Mutexverifiers.ps1,C:\Windows\diagnostics\system\WindowsUpdate\CL_Mutexverifiers.ps1,Execute,T1216,high,Proxy execution with CL_Mutexverifiers.ps1
+cmd.exe,Cmd.exe,C:\Windows\System32\cmd.exe,ADS|Download|Upload,T1048.003|T1059.003|T1105|T1564.004,medium,The command-line interpreter in Windows
+cmdkey.exe,Cmdkey.exe,C:\Windows\System32\cmdkey.exe,Credentials,T1078,high,creates; lists; and deletes stored user names and passwords or credentials.
+cmdl32.exe,cmdl32.exe,C:\Windows\System32\cmdl32.exe,Download,T1105,medium,Microsoft Connection Manager Auto-Download
+cmstp.exe,Cmstp.exe,C:\Windows\System32\cmstp.exe,AWL Bypass|Execute,T1218.003,high,Installs or removes a Connection Manager service profile.
+colorcpl.exe,Colorcpl.exe,C:\Windows\System32\colorcpl.exe,Copy,T1036.005,low,Binary that handles color management
+computerdefaults.exe,ComputerDefaults.exe,C:\Windows\System32\ComputerDefaults.exe,UAC Bypass,T1548.002,high,ComputerDefaults.exe is a Windows system utility for managing default applications for tasks like web browsing; emailing; and media playback.
+comsvcs.dll,Comsvcs.dll,c:\windows\system32\comsvcs.dll,Dump,T1003.001,low,COM+ Services
+configsecuritypolicy.exe,ConfigSecurityPolicy.exe,C:\Program Files\Windows Defender\ConfigSecurityPolicy.exe,Download|Upload,T1105|T1567,medium,Binary part of Windows Defender. Used to manage settings in Windows Defender. You can configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more granular approach when shifting workloads.
+conhost.exe,Conhost.exe,c:\windows\system32\conhost.exe,Execute,T1202,high,Console Window host
+control.exe,Control.exe,C:\Windows\System32\control.exe,ADS|Execute,T1218.002,high,Binary used to launch controlpanel items in Windows
+coregen.exe,coregen.exe,C:\Program Files\Microsoft Silverlight\5.1.50918.0\coregen.exe,AWL Bypass|Execute,T1055|T1218,high,"Binary coregen.exe (Microsoft CoreCLR Native Image Generator) loads exported function GetCLRRuntimeHost from coreclr.dll or from .DLL in arbitrary path. Coregen is located within ""C:\Program Files (x86)\Microsoft Silverlight\5.1.50918.0\"" or another version of Silverlight. Coregen is signed by Microsoft and bundled with Microsoft Silverlight."
+createdump.exe,Createdump.exe,C:\Program Files\dotnet\shared\Microsoft.NETCore.App\<version>\createdump.exe,Dump,T1003,low,Microsoft .NET Runtime Crash Dump Generator (included in .NET Core)
+csc.exe,Csc.exe,C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe,Compile,T1127,medium,Binary file used by .NET Framework to compile C# code
+cscript.exe,Cscript.exe,C:\Windows\System32\cscript.exe,ADS,T1564.004,low,Binary used to execute scripts in Windows
+csi.exe,csi.exe,c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Roslyn\csi.exe,Execute,T1127,high,Command line interface included with Visual Studio.
+customshellhost.exe,CustomShellHost.exe,C:\Windows\System32\CustomShellHost.exe,Execute,T1218,high,A host process that is used by custom shells when using Windows in Kiosk mode.
+datasvcutil.exe,DataSvcUtil.exe,C:\Windows\Microsoft.NET\Framework64\v3.5\DataSvcUtil.exe,Upload,T1567,medium,DataSvcUtil.exe is a command-line tool provided by WCF Data Services that consumes an Open Data Protocol (OData) feed and generates the client data service classes that are needed to access a data service from a .NET Framework client application.
+defaultpack.exe,DefaultPack.EXE,C:\Program Files (x86)\Microsoft\DefaultPack\DefaultPack.exe,Execute,T1218,high,This binary can be downloaded along side multiple software downloads on the Microsoft website. It gets downloaded when the user forgets to uncheck the option to set Bing as the default search provider.
+desk.cpl,Desk.cpl,C:\Windows\System32\desk.cpl,Execute,T1218.011,high,Desktop Settings Control Panel
+desktopimgdownldr.exe,Desktopimgdownldr.exe,c:\windows\system32\desktopimgdownldr.exe,Download,T1105,medium,Windows binary used to configure lockscreen/desktop image
+devicecredentialdeployment.exe,DeviceCredentialDeployment.exe,C:\Windows\System32\DeviceCredentialDeployment.exe,Conceal,T1564,low,Device Credential Deployment
+devinit.exe,Devinit.exe,C:\Program Files\Microsoft Visual Studio\<version>\Community\Common7\Tools\devinit\devinit.exe,Execute,T1218.007,high,Visual Studio 2019 tool
+devtoolslauncher.exe,Devtoolslauncher.exe,c:\windows\system32\devtoolslauncher.exe,Execute,T1127,high,Binary will execute specified binary. Part of VS/VScode installation.
+devtunnel.exe,devtunnel.exe,C:\Users\<username>\AppData\Local\Temp\.net\devtunnel\devtunnel.exe,Download,T1105,medium,Binary to enable forwarded ports on windows operating systems.
+dfshim.dll,Dfshim.dll,C:\Windows\Microsoft.NET\Framework\v2.0.50727\Dfsvc.exe,AWL Bypass,T1127.002,high,ClickOnce engine in Windows used by .NET
+dfsvc.exe,Dfsvc.exe,C:\Windows\Microsoft.NET\Framework\v2.0.50727\Dfsvc.exe,AWL Bypass,T1127.002,high,ClickOnce engine in Windows used by .NET
+diantz.exe,Diantz.exe,c:\windows\system32\diantz.exe,ADS|Download|Execute,T1036|T1105|T1564.004,high,Binary that package existing files into a cabinet (.cab) file
+diskshadow.exe,Diskshadow.exe,C:\Windows\System32\diskshadow.exe,Dump|Execute,T1003.003|T1202,high,Diskshadow.exe is a tool that exposes the functionality offered by the volume shadow copy Service (VSS).
+dnscmd.exe,Dnscmd.exe,C:\Windows\System32\Dnscmd.exe,Execute,T1543.003,high,A command-line interface for managing DNS servers
+dnx.exe,dnx.exe,no default,Execute,T1127,high,.NET Execution environment file included with .NET.
+dotnet.exe,Dotnet.exe,C:\Program Files\dotnet\dotnet.exe,AWL Bypass|Execute,T1059|T1218,high,dotnet.exe comes with .NET Framework
+dsdbutil.exe,dsdbutil.exe,C:\Windows\System32\dsdbutil.exe,Dump,T1003.003,low,Dsdbutil is a command-line tool that is built into Windows Server. It is available if you have the AD LDS server role installed. Can be used as a command line utility to export Active Directory.
+dtutil.exe,dtutil.exe,C:\Program Files\Microsoft SQL Server\<version>\DTS\Binn\dtutil.exe,Copy,T1105,low,Microsoft command line utility used to manage SQL Server Integration Services packages.
+dump64.exe,Dump64.exe,C:\Program Files (x86)\Microsoft Visual Studio\Installer\Feedback\dump64.exe,Dump,T1003.001,low,Memory dump tool that comes with Microsoft Visual Studio
+dumpminitool.exe,DumpMinitool.exe,C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\TestPlatform\Extensions\DumpMinitool.exe,Dump,T1003.001,low,Dump tool part Visual Studio 2022
+dxcap.exe,Dxcap.exe,C:\Windows\System32\dxcap.exe,Execute,T1127,high,DirectX diagnostics/debugger included with Visual Studio.
+ecmangen.exe,ECMangen.exe,C:\Program Files (x86)\Microsoft SDKs\Windows\<version>\Bin\ECMangen.exe,Download,T1105,medium,Command-line tool for managing certificates in Microsoft Exchange Server.
+esentutl.exe,Esentutl.exe,C:\Windows\System32\esentutl.exe,ADS|Copy|Download,T1003.003|T1105|T1564.004,medium,Binary for working with Microsoft Joint Engine Technology (JET) database
+eudcedit.exe,Eudcedit.exe,c:\windows\system32\eudcedit.exe,UAC Bypass,T1548.002,high,Private Character Editor Windows Utility
+eventvwr.exe,Eventvwr.exe,C:\Windows\System32\eventvwr.exe,UAC Bypass,T1548.002,high,Displays Windows Event Logs in a GUI window.
+excel.exe,Excel.exe,C:\Program Files (x86)\Microsoft Office 16\ClientX86\Root\Office16\Excel.exe,Download,T1105,medium,Microsoft Office binary
+expand.exe,Expand.exe,C:\Windows\System32\Expand.exe,ADS|Copy|Download,T1105|T1564.004,medium,Binary that expands one or more compressed files
+explorer.exe,Explorer.exe,C:\Windows\explorer.exe,Execute,T1202,high,Binary used for managing files and system components within Windows
+extexport.exe,Extexport.exe,C:\Program Files\Internet Explorer\Extexport.exe,Execute,T1218,high,Load a DLL located in the c:\test folder with a specific name.
+extrac32.exe,Extrac32.exe,C:\Windows\System32\extrac32.exe,ADS|Copy|Download,T1105|T1564.004,medium,Extract to ADS; copy or overwrite a file with Extrac32.exe
+findstr.exe,Findstr.exe,C:\Windows\System32\findstr.exe,ADS|Credentials|Download,T1105|T1552.001|T1564.004,high,Write to ADS; discover; or download files with Findstr.exe
+finger.exe,Finger.exe,c:\windows\system32\finger.exe,Download,T1105,medium,Displays information about a user or users on a specified remote computer that is running the Finger service or daemon
+fltmc.exe,fltMC.exe,C:\Windows\System32\fltMC.exe,Tamper,T1562.001,low,Filter Manager Control Program used by Windows
+forfiles.exe,Forfiles.exe,C:\Windows\System32\forfiles.exe,ADS|Execute,T1202|T1564.004,high,Selects and executes a command on a file or set of files. This command is useful for batch processing.
+fsi.exe,Fsi.exe,C:\Program Files\dotnet\sdk\<version>\FSharp\fsi.exe,AWL Bypass,T1059,high,64-bit FSharp (F#) Interpreter included with Visual Studio and DotNet Core SDK.
+fsianycpu.exe,FsiAnyCpu.exe,c:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\fsianycpu.exe,AWL Bypass,T1059,high,32/64-bit FSharp (F#) Interpreter included with Visual Studio.
+fsutil.exe,Fsutil.exe,C:\Windows\System32\fsutil.exe,Execute|Tamper,T1218|T1485,high,File System Utility
+ftp.exe,Ftp.exe,C:\Windows\System32\ftp.exe,Download|Execute,T1105|T1202,high,A binary designed for connecting to FTP servers
+gpscript.exe,Gpscript.exe,C:\Windows\System32\gpscript.exe,Execute,T1218,high,Used by group policy to process scripts
+hh.exe,Hh.exe,C:\Windows\hh.exe,Download|Execute,T1105|T1218.001,high,Binary used for processing chm files in Windows
+ie4uinit.exe,Ie4uinit.exe,c:\windows\system32\ie4uinit.exe,Execute,T1218,high,Executes commands from a specially prepared ie4uinit.inf file.
+ieadvpack.dll,Ieadvpack.dll,c:\windows\system32\ieadvpack.dll,AWL Bypass|Execute,T1218.011,high,INF installer for Internet Explorer. Has much of the same functionality as advpack.dll.
+iediagcmd.exe,iediagcmd.exe,C:\Program Files\Internet Explorer\iediagcmd.exe,Execute,T1218,high,Diagnostics Utility for Internet Explorer
+ieexec.exe,Ieexec.exe,C:\Windows\Microsoft.NET\Framework\v2.0.50727\ieexec.exe,Download|Execute,T1105|T1218,high,The IEExec.exe application is an undocumented Microsoft .NET Framework application that is included with the .NET Framework. You can use the IEExec.exe application as a host to run other managed applications that you start by using a URL.
+ieframe.dll,Ieframe.dll,c:\windows\system32\ieframe.dll,Execute,T1218.011,high,Internet Browser DLL for translating HTML code.
+ilasm.exe,Ilasm.exe,C:\Windows\Microsoft.NET\Framework\v4.0.30319\ilasm.exe,Compile,T1127,medium,used for compile c# code into dll or exe.
+imewdbld.exe,IMEWDBLD.exe,C:\Windows\System32\IME\SHARED\IMEWDBLD.exe,Download,T1105,medium,Microsoft IME Open Extended Dictionary Module
+infdefaultinstall.exe,Infdefaultinstall.exe,C:\Windows\System32\Infdefaultinstall.exe,Execute,T1218,high,Binary used to perform installation based on content inside inf files
+installutil.exe,Installutil.exe,C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil.exe,AWL Bypass|Download|Execute,T1105|T1218.004,high,The Installer tool is a command-line utility that allows you to install and uninstall server resources by executing the installer components in specified assemblies
+intellitrace.exe,IntelliTrace.exe,C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\IntelliTrace.exe,Execute,T1127,high,Visual Studio command-line tool for collecting and managing diagnostic trace files.
+iscsicpl.exe,iscsicpl.exe,c:\windows\system32\iscsicpl.exe,UAC Bypass,T1548.002,high,Microsoft iSCSI Initiator Control Panel tool
+jsc.exe,Jsc.exe,C:\Windows\Microsoft.NET\Framework\v4.0.30319\Jsc.exe,Compile,T1127,medium,Binary file used by .NET to compile JavaScript code to .exe or .dll format
+launch-vsdevshell.ps1,Launch-VsDevShell.ps1,C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\Launch-VsDevShell.ps1,Execute,T1216,high,Locates and imports a Developer PowerShell module and calls the Enter-VsDevShell cmdlet
+ldifde.exe,Ldifde.exe,c:\windows\system32\ldifde.exe,Download,T1105,medium,Creates; modifies; and deletes LDAP directory objects.
+logger.exe,Logger.exe,C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\logger.exe,Execute,T1202,high,A logging configuration tool from the Windows Kits used to start and manage process logging.
+makecab.exe,Makecab.exe,C:\Windows\System32\makecab.exe,ADS|Download|Execute,T1036|T1105|T1564.004,high,Binary to package existing files into a cabinet (.cab) file
+manage-bde.wsf,Manage-bde.wsf,C:\Windows\System32\manage-bde.wsf,Execute,T1216,high,Script for managing BitLocker
+mavinject.exe,Mavinject.exe,C:\Windows\System32\mavinject.exe,ADS|Execute,T1218.013|T1564.004,high,Used by App-v in Windows
+mftrace.exe,Mftrace.exe,C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\mftrace.exe,Execute,T1127,high,Trace log generation tool for Media Foundation Tools.
+microsoft.nodejstools.pressanykey.exe,Microsoft.NodejsTools.PressAnyKey.exe,C:\Program Files\Microsoft Visual Studio\<version>\Community\Common7\IDE\Extensions\Microsoft\NodeJsTools\NodeJsTools\Microsoft.NodejsTools.PressAnyKey.exe,Execute,T1127,high,Part of the NodeJS Visual Studio tools.
+microsoft.workflow.compiler.exe,Microsoft.Workflow.Compiler.exe,C:\Windows\Microsoft.Net\Framework64\v4.0.30319\Microsoft.Workflow.Compiler.exe,AWL Bypass|Execute,T1127,high,A utility included with .NET that is capable of compiling and executing C# or VB.net code.
+mmc.exe,Mmc.exe,C:\Windows\System32\mmc.exe,Download|Execute|UAC Bypass,T1218.014,high,Load snap-ins to locally and remotely manage Windows systems
+mpcmdrun.exe,MpCmdRun.exe,C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.4-0\MpCmdRun.exe,ADS|Download,T1105|T1564.004,medium,Binary part of Windows Defender. Used to manage settings in Windows Defender
+mpiexec.exe,Mpiexec.exe,C:\Program Files\Microsoft MPI\Bin\mpiexec.exe,Execute,T1127,high,Command-line tool for running Message Passing Interface (MPI) applications.
+msaccess.exe,MSAccess.exe,C:\Program Files (x86)\Microsoft Office 16\ClientX86\Root\Office16\MSAccess.exe,Download,T1105,medium,Microsoft Office component
+msbuild.exe,Msbuild.exe,C:\Windows\Microsoft.NET\Framework\v2.0.50727\Msbuild.exe,AWL Bypass|Execute,T1036|T1127.001,high,Used to compile and execute code
+msconfig.exe,Msconfig.exe,C:\Windows\System32\msconfig.exe,Execute,T1218,high,MSConfig is a troubleshooting tool which is used to temporarily disable or re-enable software; device drivers or Windows services that run during startup process to help the user determine the cause of a problem with Windows
+msdeploy.exe,Msdeploy.exe,C:\Program Files\IIS\Microsoft Web Deploy V2\msdeploy.exe,AWL Bypass|Copy|Execute,T1105|T1218,high,Microsoft tool used to deploy Web Applications.
+msdt.exe,Msdt.exe,C:\Windows\System32\Msdt.exe,AWL Bypass|Execute,T1202|T1218,high,Microsoft diagnostics tool
+msedge.exe,Msedge.exe,c:\Program Files\Microsoft\Edge\Application\msedge.exe,Download|Execute,T1105|T1218.015,high,Microsoft Edge browser
+msedge_proxy.exe,msedge_proxy.exe,C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe,Download|Execute,T1105|T1218.015,high,Microsoft Edge Browser
+msedgewebview2.exe,msedgewebview2.exe,C:\Program Files (x86)\Microsoft\Edge\Application\114.0.1823.43\msedgewebview2.exe,Execute,T1218.015,high,msedgewebview2.exe is the executable file for Microsoft Edge WebView2; which is a web browser control used by applications to display web content.
+mshta.exe,Mshta.exe,C:\Windows\System32\mshta.exe,ADS|Download|Execute,T1105|T1218.005,high,Used by Windows to execute html applications. (.hta)
+mshtml.dll,Mshtml.dll,c:\windows\system32\mshtml.dll,Execute,T1218.011,high,Microsoft HTML Viewer
+msiexec.exe,Msiexec.exe,C:\Windows\System32\msiexec.exe,Execute,T1218.007,high,Used by Windows to execute msi files
+msohtmed.exe,MsoHtmEd.exe,C:\Program Files (x86)\Microsoft Office 16\ClientX86\Root\Office16\MSOHTMED.exe,Download,T1105,medium,Microsoft Office component
+mspub.exe,Mspub.exe,C:\Program Files (x86)\Microsoft Office 16\ClientX86\Root\Office16\MSPUB.exe,Download,T1105,medium,Microsoft Publisher
+msxsl.exe,msxsl.exe,no default,ADS|AWL Bypass|Download|Execute,T1105|T1220|T1564,high,Command line utility used to perform XSL transformations.
+netsh.exe,Netsh.exe,C:\WINDOWS\System32\Netsh.exe,Execute,T1546.007,high,Netsh is a Windows tool used to manipulate network interface settings.
+ngen.exe,Ngen.exe,C:\Windows\Microsoft.NET\Framework\v2.0.50727\ngen.exe,Download,T1105,medium,Microsoft Native Image Generator.
+nmcap.exe,Nmcap.exe,C:\Program Files\Microsoft Network Monitor 3\nmcap.exe,Reconnaissance,T1040,low,Command-line packet capture utility from Microsoft Network Monitor 3.x.
+ntdsutil.exe,ntdsutil.exe,C:\Windows\System32\ntdsutil.exe,Dump,T1003.003,low,Command line utility used to export Active Directory.
+ntsd.exe,Ntsd.exe,C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\ntsd.exe,Execute,T1127,high,Symbolic Debugger for Windows.
+odbcad32.exe,odbcad32.exe,c:\windows\system32\odbcad32.exe,UAC Bypass,T1548.002,high,ODBC Data Source Administrator to manage User/System DSNs and ODBC drivers.
+odbcconf.exe,Odbcconf.exe,C:\Windows\System32\odbcconf.exe,Execute,T1218.008,high,Used in Windows for managing ODBC connections
+offlinescannershell.exe,OfflineScannerShell.exe,C:\Program Files\Windows Defender\Offline\OfflineScannerShell.exe,Execute,T1218,high,Windows Defender Offline Shell
+onedrivestandaloneupdater.exe,OneDriveStandaloneUpdater.exe,C:\Users\<username>\AppData\Local\Microsoft\OneDrive\OneDriveStandaloneUpdater.exe,Download,T1105,medium,OneDrive Standalone Updater
+openconsole.exe,OpenConsole.exe,C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\Terminal\ServiceHub\os64\OpenConsole.exe,Execute,T1202,high,Console Window host for Windows Terminal
+pcalua.exe,Pcalua.exe,C:\Windows\System32\pcalua.exe,Execute,T1202,high,Program Compatibility Assistant
+pcwrun.exe,Pcwrun.exe,C:\Windows\System32\pcwrun.exe,Execute,T1202|T1218,high,Program Compatibility Wizard
+pcwutl.dll,Pcwutl.dll,c:\windows\system32\pcwutl.dll,Execute,T1218.011,high,Microsoft HTML Viewer
+pester.bat,Pester.bat,c:\Program Files\WindowsPowerShell\Modules\Pester\<VERSION>\bin\Pester.bat,Execute,T1216,high,Used as part of the Powershell pester
+photoviewer.dll,PhotoViewer.dll,C:\Program Files\Windows Photo Viewer\PhotoViewer.dll,Download,T1105,medium,Windows Photo Viewer
+pixtool.exe,Pixtool.exe,C:\Program Files\Microsoft PIX\pixtool.exe,Execute,T1127,high,Command line utility for taking and analyzing PIX GPU captures.
+pktmon.exe,Pktmon.exe,c:\windows\system32\pktmon.exe,Reconnaissance,T1040,low,Capture Network Packets on the windows 10 with October 2018 Update or later.
+pnputil.exe,Pnputil.exe,C:\Windows\system32\pnputil.exe,Execute,T1547,high,Used for installing drivers
+powerpnt.exe,Powerpnt.exe,C:\Program Files (x86)\Microsoft Office 16\ClientX86\Root\Office16\Powerpnt.exe,Download,T1105,medium,Microsoft Office binary.
+presentationhost.exe,Presentationhost.exe,C:\Windows\System32\Presentationhost.exe,Download|Execute,T1105|T1218,high,File is used for executing Browser applications
+print.exe,Print.exe,C:\Windows\System32\print.exe,ADS|Copy,T1105|T1564.004,low,Used by Windows to send files to the printer
+printbrm.exe,PrintBrm.exe,C:\Windows\System32\spool\tools\PrintBrm.exe,ADS|Download,T1105|T1564.004,medium,Printer Migration Command-Line Tool
+procdump.exe,Procdump.exe,no default,Execute,T1202,high,SysInternals Memory Dump Tool
+protocolhandler.exe,ProtocolHandler.exe,C:\Program Files (x86)\Microsoft Office 16\ClientX86\Root\Office16\ProtocolHandler.exe,Download,T1105,medium,Microsoft Office binary
+provlaunch.exe,Provlaunch.exe,c:\windows\system32\provlaunch.exe,Execute,T1218,high,Launcher process
+psr.exe,Psr.exe,c:\windows\system32\psr.exe,Reconnaissance,T1113,low,Windows Problem Steps Recorder; used to record screen and clicks.
+pubprn.vbs,Pubprn.vbs,C:\Windows\System32\Printing_Admin_Scripts\en-US\pubprn.vbs,Execute,T1216.001,high,Proxy execution with Pubprn.vbs
+query.exe,Query.exe,c:\windows\system32\query.exe,Execute,T1218,high,Remote Desktop Services MultiUser Query Utility
+rasautou.exe,Rasautou.exe,C:\Windows\System32\rasautou.exe,Execute,T1218,high,Windows Remote Access Dialer
+rcsi.exe,rcsi.exe,no default,AWL Bypass|Execute,T1127,high,Non-Interactive command line inerface included with Visual Studio.
+rdrleakdiag.exe,rdrleakdiag.exe,c:\windows\system32\rdrleakdiag.exe,Dump,T1003|T1003.001,low,Microsoft Windows resource leak diagnostic tool
+reg.exe,Reg.exe,C:\Windows\System32\reg.exe,ADS|Credentials,T1003.002|T1564.004,high,Used to manipulate the registry
+regasm.exe,Regasm.exe,C:\Windows\Microsoft.NET\Framework\v2.0.50727\regasm.exe,AWL Bypass|Execute,T1218.009,high,Part of .NET
+regedit.exe,Regedit.exe,C:\Windows\regedit.exe,ADS,T1564.004,low,Used by Windows to manipulate registry
+regini.exe,Regini.exe,C:\Windows\System32\regini.exe,ADS,T1564.004,low,Used to manipulate the registry
+register-cimprovider.exe,Register-cimprovider.exe,C:\Windows\System32\Register-cimprovider.exe,Execute,T1218,high,Used to register new wmi providers
+regsvcs.exe,Regsvcs.exe,C:\Windows\Microsoft.NET\Framework64\v2.0.50727\RegSvcs.exe,AWL Bypass|Execute,T1218.009,high,Regsvcs and Regasm are Windows command-line utilities that are used to register .NET Component Object Model (COM) assemblies
+regsvr32.exe,Regsvr32.exe,C:\Windows\System32\regsvr32.exe,AWL Bypass|Execute,T1218.010,high,Used by Windows to register dlls
+remote.exe,Remote.exe,C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\remote.exe,AWL Bypass|Execute,T1127,high,Debugging tool included with Windows Debugging Tools
+replace.exe,Replace.exe,C:\Windows\System32\replace.exe,Copy|Download,T1105,medium,Used to replace file with another file
+reset.exe,Reset.exe,c:\windows\system32\reset.exe,Execute,T1218,high,Remote Desktop Services Reset Utility
+rpcping.exe,Rpcping.exe,C:\Windows\System32\rpcping.exe,Credentials,T1003|T1187,high,Used to verify rpc connection
+rundll32.exe,Rundll32.exe,C:\Windows\System32\rundll32.exe,ADS|Execute,T1218.011|T1564.004,high,Used by Windows to execute dll files
+runexehelper.exe,Runexehelper.exe,c:\windows\system32\runexehelper.exe,Execute,T1218,high,Launcher process
+runonce.exe,Runonce.exe,C:\Windows\System32\runonce.exe,Execute,T1218,high,Executes a Run Once Task that has been configured in the registry
+runscripthelper.exe,Runscripthelper.exe,C:\Windows\WinSxS\amd64_microsoft-windows-u..ed-telemetry-client_31bf3856ad364e35_10.0.16299.15_none_c2df1bba78111118\Runscripthelper.exe,Execute,T1218,high,Execute target PowerShell script
+sc.exe,Sc.exe,C:\Windows\System32\sc.exe,ADS,T1564.004,low,Used by Windows to manage services
+schtasks.exe,Schtasks.exe,c:\windows\system32\schtasks.exe,Execute,T1053.005,high,Schedule periodic tasks
+scriptrunner.exe,Scriptrunner.exe,C:\Windows\System32\scriptrunner.exe,Execute,T1202|T1218,high,Execute binary through proxy binary to evade defensive counter measures
+scrobj.dll,Scrobj.dll,c:\windows\system32\scrobj.dll,Download,T1105,medium,Windows Script Component Runtime
+setres.exe,Setres.exe,c:\windows\system32\setres.exe,Execute,T1218,high,Configures display settings
+settingsynchost.exe,SettingSyncHost.exe,C:\Windows\System32\SettingSyncHost.exe,Execute,T1218,high,Host Process for Setting Synchronization
+setupapi.dll,Setupapi.dll,c:\windows\system32\setupapi.dll,AWL Bypass|Execute,T1218.011,high,Windows Setup Application Programming Interface
+sftp.exe,Sftp.exe,C:\Windows\System32\OpenSSH\sftp.exe,Execute,T1202,high,sftp.exe is a Windows command-line utility that uses the Secure File Transfer Protocol (SFTP) to securely transfer files between a local machine and a remote server.
+shdocvw.dll,Shdocvw.dll,c:\windows\system32\shdocvw.dll,Execute,T1218.011,high,Shell Doc Object and Control Library.
+shell32.dll,Shell32.dll,c:\windows\system32\shell32.dll,Execute,T1218.011,high,Windows Shell Common Dll
+shimgvw.dll,Shimgvw.dll,c:\windows\system32\shimgvw.dll,Download,T1105,medium,Photo Gallery Viewer
+sigverif.exe,Sigverif.exe,C:\Windows\System32\sigverif.exe,Execute,T1218,high,File Signature Verification utility to verify digital signatures of files
+sqldumper.exe,Sqldumper.exe,C:\Program Files\Microsoft SQL Server\90\Shared\SQLDumper.exe,Dump,T1003|T1003.001,low,Debugging utility included with Microsoft SQL.
+sqlps.exe,Sqlps.exe,C:\Program files (x86)\Microsoft SQL Server\100\Tools\Binn\sqlps.exe,Execute,T1218,high,Tool included with Microsoft SQL Server that loads SQL Server cmdlets. Microsoft SQL Server\100 and 110 are Powershell v2. Microsoft SQL Server\120 and 130 are Powershell version 4. Replaced by SQLToolsPS.exe in SQL Server 2016; but will be included with installation for compatability reasons.
+sqltoolsps.exe,SQLToolsPS.exe,C:\Program files (x86)\Microsoft SQL Server\130\Tools\Binn\sqlps.exe,Execute,T1218,high,Tool included with Microsoft SQL that loads SQL Server cmdlts. A replacement for sqlps.exe. Successor to sqlps.exe in SQL Server 2016+.
+squirrel.exe,Squirrel.exe,C:\Users\<username>\AppData\Local\Microsoft\Teams\current\Squirrel.exe,AWL Bypass|Download|Execute,T1218,high,Binary to update the existing installed Nuget/squirrel package. Part of Microsoft Teams installation.
+ssh.exe,ssh.exe,c:\windows\system32\OpenSSH\ssh.exe,Execute,T1202,high,Ssh.exe is the OpenSSH compatible client can be used to connect to Windows 10 (build 1809 and later) and Windows Server 2019 devices.
+stordiag.exe,Stordiag.exe,c:\windows\system32\stordiag.exe,Execute,T1218,high,Storage diagnostic tool
+syncappvpublishingserver.exe,SyncAppvPublishingServer.exe,C:\Windows\System32\SyncAppvPublishingServer.exe,Execute,T1218,high,Used by App-v to get App-v server lists
+syncappvpublishingserver.vbs,Syncappvpublishingserver.vbs,C:\Windows\System32\SyncAppvPublishingServer.vbs,Execute,T1216.002,high,Script used related to app-v and publishing server
+syssetup.dll,Syssetup.dll,c:\windows\system32\syssetup.dll,AWL Bypass|Execute,T1218.011,high,Windows NT System Setup
+tar.exe,Tar.exe,C:\Windows\System32\tar.exe,ADS|Copy,T1105|T1564.004,low,Used by Windows to extract and create archives.
+te.exe,te.exe,no default,Execute,T1127,high,Testing tool included with Microsoft Test Authoring and Execution Framework (TAEF).
+teams.exe,Teams.exe,C:\Users\<username>\AppData\Local\Microsoft\Teams\current\Teams.exe,Execute,T1218.015,high,Electron runtime binary which runs the Teams application
+testwindowremoteagent.exe,TestWindowRemoteAgent.exe,C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow\RemoteAgent\TestWindowRemoteAgent.exe,Upload,T1048,medium,TestWindowRemoteAgent.exe is the command-line tool to establish RPC
+tracker.exe,Tracker.exe,no default,AWL Bypass|Execute,T1127,high,Tool included with Microsoft .Net Framework.
+ttdinject.exe,Ttdinject.exe,C:\Windows\System32\ttdinject.exe,Execute,T1127,high,Used by Windows 1809 and newer to Debug Time Travel (Underlying call of tttracer.exe)
+tttracer.exe,Tttracer.exe,C:\Windows\System32\tttracer.exe,Dump|Execute,T1003|T1127,high,Used by Windows 1809 and newer to Debug Time Travel
+unregmp2.exe,Unregmp2.exe,C:\Windows\System32\unregmp2.exe,Execute,T1202,high,Microsoft Windows Media Player Setup Utility
+update.exe,Update.exe,C:\Users\<username>\AppData\Local\Microsoft\Teams\update.exe,AWL Bypass|Download|Execute,T1070|T1218|T1547,high,Binary to update the existing installed Nuget/squirrel package. Part of Microsoft Teams installation.
+url.dll,Url.dll,c:\windows\system32\url.dll,Execute,T1218.011,high,Internet Shortcut Shell Extension DLL.
+utilityfunctions.ps1,UtilityFunctions.ps1,C:\Windows\diagnostics\system\Networking\UtilityFunctions.ps1,Execute,T1216,high,PowerShell Diagnostic Script
+vbc.exe,vbc.exe,C:\Windows\Microsoft.NET\Framework\v4.0.30319\vbc.exe,Compile,T1127,medium,Binary file used for compile vbs code
+verclsid.exe,Verclsid.exe,C:\Windows\System32\verclsid.exe,Execute,T1218.012,high,Used to verify a COM object before it is instantiated by Windows Explorer
+visio.exe,Visio.exe,C:\Program Files (x86)\Microsoft Office\Office14\Visio.exe,Download,T1105,medium,Microsoft Visio Executable
+visualuiaverifynative.exe,VisualUiaVerifyNative.exe,c:\Program Files (x86)\Windows Kits\10\bin\<version>\arm64\UIAVerify\VisualUiaVerifyNative.exe,AWL Bypass,T1218,high,A Windows SDK binary for manual and automated testing of Microsoft UI Automation implementation and controls.
+vsdiagnostics.exe,VSDiagnostics.exe,C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector\VSDiagnostics.exe,Execute,T1127,high,Command-line tool used for performing diagnostics.
+vshadow.exe,Vshadow.exe,C:\Program Files (x86)\Windows Kits\10\bin\<version>\x64\vshadow.exe,Execute,T1202,high,VShadow is a command-line tool that can be used to create and manage volume shadow copies.
+vsiisexelauncher.exe,VSIISExeLauncher.exe,C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Web Tools\ProjectSystem\VSIISExeLauncher.exe,Execute,T1218,high,Binary will execute specified binary. Part of VS/VScode installation.
+vsjitdebugger.exe,vsjitdebugger.exe,c:\windows\system32\vsjitdebugger.exe,Execute,T1127,high,Just-In-Time (JIT) debugger included with Visual Studio
+vslaunchbrowser.exe,VSLaunchBrowser.exe,C:\Program Files\Microsoft Visual Studio\<version>\Community\Common7\IDE\VSLaunchBrowser.exe,Download|Execute,T1105|T1127,high,Microsoft Visual Studio browser launcher tool for web applications debugging
+vsls-agent.exe,vsls-agent.exe,c:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\Extensions\Microsoft\LiveShare\Agent\vsls-agent.exe,Execute,T1218,high,Agent for Visual Studio Live Share (Code Collaboration)
+vstest.console.exe,vstest.console.exe,C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe,AWL Bypass,T1127,high,VSTest.Console.exe is the command-line tool to run tests
+wab.exe,Wab.exe,C:\Program Files\Windows Mail\wab.exe,Execute,T1218,high,Windows address book manager
+wbadmin.exe,wbadmin.exe,C:\Windows\System32\wbadmin.exe,Dump,T1003.003,low,Windows Backup Administration utility
+wbemtest.exe,wbemtest.exe,c:\windows\system32\wbem\wbemtest.exe,Execute,T1047,high,WMI/WBEM Test Binary
+wfc.exe,Wfc.exe,C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\wfc.exe,AWL Bypass,T1127,high,The Workflow Command-line Compiler tool is included with the Windows Software Development Kit (SDK).
+wfmformat.exe,WFMFormat.exe,C:\there\is\no\default\installation\path\WFMFormat.exe,Execute,T1127,high,Command-line tool used for pretty-print a dump file generated by Message Farm Analyzer tool.
+windbg.exe,WinDbg.exe,C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe,Execute,T1127,high,Windows Debugger for advanced user-mode and kernel-mode debugging.
+winfile.exe,winfile.exe,C:\Windows\System32\winfile.exe,Execute,T1202,high,Windows File Manager executable
+winget.exe,winget.exe,C:\Users\user\AppData\Local\Microsoft\WindowsApps\winget.exe,AWL Bypass|Download|Execute,T1105,high,Windows Package Manager tool
+winproj.exe,WinProj.exe,C:\Program Files (x86)\Microsoft Office\Office14\WinProj.exe,Download,T1105,medium,Microsoft Project Executable
+winrm.vbs,winrm.vbs,C:\Windows\System32\winrm.vbs,AWL Bypass|Execute,T1216|T1220,high,Script used for manage Windows RM settings
+winword.exe,Winword.exe,C:\Program Files\Microsoft Office\root\Office16\winword.exe,Download,T1105,medium,Microsoft Office binary
+wlrmdr.exe,Wlrmdr.exe,c:\windows\system32\wlrmdr.exe,Execute,T1202,high,Windows Logon Reminder executable
+wmic.exe,Wmic.exe,C:\Windows\System32\wbem\wmic.exe,ADS|Copy|Execute,T1105|T1218|T1564.004,high,The WMI command-line (WMIC) utility provides a command-line interface for WMI
+workfolders.exe,WorkFolders.exe,C:\Windows\System32\WorkFolders.exe,Execute,T1218,high,Work Folders
+write.exe,write.exe,C:\Windows\write.exe,Execute,T1218,high,Windows Write
+wscript.exe,Wscript.exe,C:\Windows\System32\wscript.exe,ADS,T1564.004,low,Used by Windows to execute scripts
+wsl.exe,Wsl.exe,C:\Windows\System32\wsl.exe,Download|Execute,T1105|T1202|T1218,high,Windows subsystem for Linux executable
+wsreset.exe,Wsreset.exe,C:\Windows\System32\wsreset.exe,UAC Bypass,T1548.002,high,Used to reset Windows Store settings according to its manifest file
+wt.exe,wt.exe,C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_<version_packageid>\wt.exe,Execute,T1202,high,Windows Terminal
+wuauclt.exe,wuauclt.exe,C:\Windows\System32\wuauclt.exe,Execute,T1218,high,Windows Update Client
+xbootmgr.exe,XBootMgr.exe,C:\Program Files\Windows Kits\10\Windows Performance Toolkit\xbootmgr.exe,Execute,T1202,high,Windows Performance Toolkit binary used to start performance traces.
+xbootmgrsleep.exe,XBootMgrSleep.exe,C:\Program Files\Windows Kits\10\Windows Performance Toolkit\xbootmgrsleep.exe,Execute,T1202,high,Windows Performance Toolkit binary used for tracing and analyzing system performance during sleep and resume transitions.
+xsd.exe,xsd.exe,C:\Program Files (x86)\Microsoft SDKs\Windows\<version>\bin\NETFX <version> Tools\xsd.exe,Download,T1105,medium,XML Schema Definition Tool included with the Windows Software Development Kit (SDK).
+xwizard.exe,Xwizard.exe,C:\Windows\System32\xwizard.exe,Download|Execute,T1105|T1218,high,Execute custom class that has been added to the registry or download a file with Xwizard.exe
+zipfldr.dll,Zipfldr.dll,c:\windows\system32\zipfldr.dll,Execute,T1218.011,high,Compressed Folder library

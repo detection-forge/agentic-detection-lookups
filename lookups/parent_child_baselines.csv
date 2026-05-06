@@ -1,0 +1,99 @@
+parent,child,os,expected,risk_if_unexpected,mitre_id,context,notes
+services.exe,svchost.exe,windows,true,critical,T1543.003,,Only services.exe should spawn svchost
+wininit.exe,services.exe,windows,true,critical,T1543.003,,System boot chain
+wininit.exe,lsass.exe,windows,true,critical,T1003,,System boot chain
+smss.exe,csrss.exe,windows,true,critical,T1543,,Session manager creates csrss
+smss.exe,winlogon.exe,windows,true,critical,T1543,,Session manager creates winlogon
+csrss.exe,conhost.exe,windows,true,low,,,Console host creation
+winlogon.exe,userinit.exe,windows,true,critical,T1543,,Logon sequence
+userinit.exe,explorer.exe,windows,true,critical,T1543,,Shell initialization
+explorer.exe,chrome.exe,windows,true,low,,,User launching browser
+explorer.exe,firefox.exe,windows,true,low,,,User launching browser
+explorer.exe,msedge.exe,windows,true,low,,,User launching browser
+explorer.exe,cmd.exe,windows,true,medium,T1059.003,,User opening command prompt
+explorer.exe,powershell.exe,windows,true,medium,T1059.001,,User launching PowerShell
+explorer.exe,notepad.exe,windows,true,low,,,User opening editor
+lsass.exe,*,windows,false,critical,T1003,,LSASS should never spawn child processes
+svchost.exe,powershell.exe,windows,false,high,T1059.001,Legitimate for WMI/scheduled tasks in rare cases,Investigate parent svchost service name
+svchost.exe,cmd.exe,windows,false,high,T1059.003,Legitimate for scheduled tasks in rare cases,Investigate parent svchost service name
+svchost.exe,mshta.exe,windows,false,critical,T1218.005,,Svchost should not run HTA
+svchost.exe,rundll32.exe,windows,conditional,medium,T1218.011,Legitimate for DLL-based services,Verify CommandLine and loaded DLL
+svchost.exe,werfault.exe,windows,true,low,,,Crash reporting
+winword.exe,cmd.exe,windows,false,critical,T1204.002,,Office spawning shell - macro execution
+winword.exe,powershell.exe,windows,false,critical,T1059.001,,Office spawning PowerShell - macro/exploit
+winword.exe,mshta.exe,windows,false,critical,T1218.005,,Office spawning HTA handler
+winword.exe,certutil.exe,windows,false,critical,T1105,,Office downloading files
+winword.exe,wscript.exe,windows,false,critical,T1059.005,,Office spawning script host
+winword.exe,cscript.exe,windows,false,critical,T1059.005,,Office spawning script host
+excel.exe,cmd.exe,windows,false,critical,T1204.002,,Office spawning shell - macro execution
+excel.exe,powershell.exe,windows,false,critical,T1059.001,,Office spawning PowerShell
+excel.exe,mshta.exe,windows,false,critical,T1218.005,,Office spawning HTA handler
+excel.exe,wscript.exe,windows,false,critical,T1059.005,,Office spawning script host
+powerpnt.exe,cmd.exe,windows,false,critical,T1204.002,,PowerPoint spawning shell
+powerpnt.exe,powershell.exe,windows,false,critical,T1059.001,,PowerPoint spawning PowerShell
+outlook.exe,cmd.exe,windows,false,high,T1204.001,,Outlook spawning shell - phishing
+outlook.exe,powershell.exe,windows,false,critical,T1059.001,,Outlook spawning PowerShell - phishing
+outlook.exe,mshta.exe,windows,false,critical,T1218.005,,Outlook spawning HTA
+wmiprvse.exe,powershell.exe,windows,conditional,high,T1047,Legitimate for SCCM/ConfigMgr WMI operations,Check if CommandLine matches management tooling
+wmiprvse.exe,cmd.exe,windows,conditional,high,T1047,Legitimate for SCCM/WMI operations,Check if CommandLine matches management tooling
+wmiprvse.exe,mshta.exe,windows,false,critical,T1047,,WMI executing HTA
+taskeng.exe,powershell.exe,windows,conditional,medium,T1053.005,Legitimate for scheduled PowerShell tasks,Verify scheduled task owner and script path
+taskeng.exe,cmd.exe,windows,conditional,medium,T1053.005,Legitimate for scheduled tasks,Verify scheduled task owner and script path
+schtasks.exe,cmd.exe,windows,conditional,medium,T1053.005,Normal for task creation,Verify task being created is legitimate
+rundll32.exe,powershell.exe,windows,false,critical,T1218.011,,DLL proxy executing PowerShell
+rundll32.exe,cmd.exe,windows,false,high,T1218.011,,DLL proxy executing shell
+regsvr32.exe,powershell.exe,windows,false,critical,T1218.010,,COM scriptlet launching PowerShell
+regsvr32.exe,cmd.exe,windows,false,critical,T1218.010,,COM scriptlet launching shell
+mshta.exe,powershell.exe,windows,false,critical,T1218.005,,HTA executing PowerShell
+mshta.exe,cmd.exe,windows,false,critical,T1218.005,,HTA executing shell
+mshta.exe,wscript.exe,windows,false,critical,T1218.005,,HTA chaining to script host
+wscript.exe,powershell.exe,windows,false,high,T1059.005,,Script host launching PowerShell
+wscript.exe,cmd.exe,windows,false,high,T1059.005,,Script host launching shell
+cscript.exe,powershell.exe,windows,false,high,T1059.005,,Script host launching PowerShell
+cscript.exe,cmd.exe,windows,false,high,T1059.005,,Script host launching shell
+powershell.exe,certutil.exe,windows,false,high,T1105,,PowerShell downloading via certutil
+powershell.exe,bitsadmin.exe,windows,false,high,T1197,,PowerShell using BITS for download
+cmd.exe,certutil.exe,windows,conditional,medium,T1105,Admin tooling may use this,Verify URL/file targets
+cmd.exe,bitsadmin.exe,windows,conditional,medium,T1197,Admin tooling may use this,Verify URL/file targets
+cmd.exe,powershell.exe,windows,conditional,medium,T1059.001,Normal for admin scripts,Check full command chain
+iexplore.exe,cmd.exe,windows,false,high,T1189,,Browser exploitation spawning shell
+iexplore.exe,powershell.exe,windows,false,critical,T1189,,Browser exploitation spawning PowerShell
+chrome.exe,cmd.exe,windows,false,high,T1189,,Browser spawning shell - exploit or extension abuse
+msedge.exe,cmd.exe,windows,false,high,T1189,,Browser spawning shell
+firefox.exe,cmd.exe,windows,false,high,T1189,,Browser spawning shell
+w3wp.exe,cmd.exe,windows,false,critical,T1505.003,,IIS webshell execution
+w3wp.exe,powershell.exe,windows,false,critical,T1505.003,,IIS webshell executing PowerShell
+w3wp.exe,certutil.exe,windows,false,critical,T1105,,IIS process downloading files
+httpd.exe,cmd.exe,windows,false,critical,T1505.003,,Apache webshell
+httpd.exe,powershell.exe,windows,false,critical,T1505.003,,Apache webshell executing PowerShell
+tomcat*.exe,cmd.exe,windows,false,critical,T1505.003,,Tomcat webshell
+sqlservr.exe,cmd.exe,windows,false,critical,T1505.001,,SQL Server command execution - xp_cmdshell
+sqlservr.exe,powershell.exe,windows,false,critical,T1505.001,,SQL Server executing PowerShell
+msdtc.exe,cmd.exe,windows,false,high,T1218,,MSDTC abuse
+consent.exe,*,windows,false,high,T1548.002,,UAC bypass indicator
+fodhelper.exe,cmd.exe,windows,false,critical,T1548.002,,UAC bypass via fodhelper
+fodhelper.exe,powershell.exe,windows,false,critical,T1548.002,,UAC bypass via fodhelper
+computerdefaults.exe,cmd.exe,windows,false,critical,T1548.002,,UAC bypass via computerdefaults
+sdclt.exe,cmd.exe,windows,false,critical,T1548.002,,UAC bypass via sdclt
+systemd,sshd,linux,true,low,,,SSH daemon startup
+systemd,cron,linux,true,low,,,Cron daemon startup
+systemd,systemd-*,linux,true,low,,,Systemd helper processes
+sshd,bash,linux,true,low,,,User SSH login session
+sshd,sh,linux,true,low,,,User SSH login session
+sshd,zsh,linux,true,low,,,User SSH login session
+cron,sh,linux,conditional,medium,T1053.003,Normal for scheduled cron jobs,Verify cron job owner and script
+cron,bash,linux,conditional,medium,T1053.003,Normal for scheduled cron jobs,Verify cron job owner and script
+cron,python*,linux,conditional,medium,T1053.003,Normal for scheduled scripts,Verify script path and owner
+apache2,sh,linux,false,critical,T1505.003,,Web server spawning shell - webshell indicator
+apache2,bash,linux,false,critical,T1505.003,,Web server spawning shell - webshell indicator
+apache2,python*,linux,false,critical,T1505.003,,Web server spawning interpreter - webshell
+nginx,sh,linux,false,critical,T1505.003,,Web server spawning shell - webshell indicator
+nginx,bash,linux,false,critical,T1505.003,,Web server spawning shell - webshell indicator
+java,sh,linux,false,high,T1059.004,Legitimate for some app servers,Verify application context
+java,bash,linux,false,high,T1059.004,Legitimate for some app servers,Verify application context
+tomcat,sh,linux,false,critical,T1505.003,,Tomcat webshell execution
+postgres,sh,linux,false,high,T1505.001,,Database command execution
+postgres,bash,linux,false,high,T1505.001,,Database command execution
+mysqld,sh,linux,false,high,T1505.001,,Database command execution
+node,sh,linux,conditional,medium,T1059.004,Legitimate for npm scripts/builds,Verify if expected in deployment
+python*,sh,linux,conditional,medium,T1059.004,Legitimate for subprocess calls,Verify script context
