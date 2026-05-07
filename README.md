@@ -35,7 +35,7 @@ Every lookup file follows:
 **CrowdStrike NG-SIEM:**
 ```cql
 #event_simpleName=ProcessRollup2
-| FileName=/\\(?<binary>[^\\]+)$/
+| binary := lower(FileName)
 | match(file="lolbas_binaries.csv", field=binary, column=filename, include=[categories, mitre_ids, risk])
 | risk="high"
 ```

@@ -8,7 +8,7 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 
 ```cql
 #event_simpleName=ProcessRollup2
-| FileName=/\\(?<binary>[^\\]+)$/
+| binary := lower(FileName)
 | match(file="lolbas_binaries.csv", field=binary, column=filename, include=[categories, mitre_ids, risk])
 | risk=*
 ```
@@ -17,7 +17,7 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 
 ```cql
 #event_simpleName=ProcessRollup2
-| FileName=/\\(?<binary>[^\\]+)$/
+| binary := lower(FileName)
 | match(file="lolbas_binaries.csv", field=binary, column=filename, include=[categories, mitre_ids, risk])
 | risk="high"
 | groupBy([ComputerName, binary, categories], function=count())
@@ -28,7 +28,7 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 
 ```cql
 #event_simpleName=ProcessRollup2
-| FileName=/\\(?<binary>[^\\]+)$/
+| binary := lower(FileName)
 | match(file="lolbas_binaries.csv", field=binary, column=filename, include=[categories])
 | categories=/Download/
 | CommandLine=/https?:\/\//i
@@ -38,7 +38,7 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 
 ```cql
 #event_simpleName=ProcessRollup2
-| FileName=/\\(?<binary>[^\\]+)$/
+| binary := lower(FileName)
 | match(file="lolbas_binaries.csv", field=binary, column=filename, include=[categories, risk])
 | categories=/Execute|AWL Bypass/
 | ParentBaseFileName=/winword|excel|powerpnt|outlook/i
@@ -50,10 +50,9 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 
 ```cql
 #event_simpleName=ProcessRollup2
-| ParentBaseFileName=lower(ParentBaseFileName)
-| FileName=/\\(?<child>[^\\]+)$/
-| child=lower(child)
-| match(file="parent_child_baselines.csv", field=[ParentBaseFileName, child], column=[parent, child], include=[expected, risk_if_unexpected, mitre_id, notes])
+| parent := lower(ParentBaseFileName)
+| child := lower(FileName)
+| match(file="parent_child_baselines.csv", field=[parent, child], column=[parent, child], include=[expected, risk_if_unexpected, mitre_id, notes])
 | expected="false"
 | risk_if_unexpected="critical"
 ```
@@ -63,8 +62,9 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 ```cql
 #event_simpleName=ProcessRollup2
 | ParentBaseFileName=/w3wp|httpd|apache2|nginx|tomcat/i
-| FileName=/\\(?<child>[^\\]+)$/
-| match(file="parent_child_baselines.csv", field=[ParentBaseFileName, child], column=[parent, child], include=[expected, risk_if_unexpected, mitre_id])
+| parent := lower(ParentBaseFileName)
+| child := lower(FileName)
+| match(file="parent_child_baselines.csv", field=[parent, child], column=[parent, child], include=[expected, risk_if_unexpected, mitre_id])
 | expected="false"
 ```
 
@@ -73,9 +73,9 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 ```cql
 #event_simpleName=ProcessRollup2
 | ParentBaseFileName=/winword|excel|powerpnt|outlook/i
-| FileName=/\\(?<child>[^\\]+)$/
-| child=lower(child)
-| match(file="parent_child_baselines.csv", field=[ParentBaseFileName, child], column=[parent, child], include=[expected, risk_if_unexpected, mitre_id])
+| parent := lower(ParentBaseFileName)
+| child := lower(FileName)
+| match(file="parent_child_baselines.csv", field=[parent, child], column=[parent, child], include=[expected, risk_if_unexpected, mitre_id])
 | expected="false"
 ```
 
@@ -85,7 +85,7 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 
 ```cql
 #event_simpleName=ProcessRollup2
-| FileName=/\\(?<binary>[^\\]+)$/
+| binary := lower(FileName)
 | match(file="lolbas_binaries.csv", field=binary, column=filename, include=[categories, risk])
 | risk="high"
 | groupBy([ComputerName, binary], function=count())
@@ -97,11 +97,10 @@ Detection queries using lookup files in CrowdStrike NG-SIEM / LogScale CQL.
 
 ```cql
 #event_simpleName=ProcessRollup2
-| ParentBaseFileName=lower(ParentBaseFileName)
-| FileName=/\\(?<child>[^\\]+)$/
-| child=lower(child)
-| match(file="parent_child_baselines.csv", field=[ParentBaseFileName, child], column=[parent, child], include=[expected, risk_if_unexpected])
+| parent := lower(ParentBaseFileName)
+| child := lower(FileName)
+| match(file="parent_child_baselines.csv", field=[parent, child], column=[parent, child], include=[expected, risk_if_unexpected])
 | expected="false"
-| groupBy([ParentBaseFileName, child, risk_if_unexpected], function=count())
+| groupBy([parent, child, risk_if_unexpected], function=count())
 | sort(_count, order=desc)
 ```
