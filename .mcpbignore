@@ -1,0 +1,12 @@
+# Exclude from MCPB bundle
+.git/
+.github/
+.pytest_cache/
+.vscode/
+__pycache__/
+*.pyc
+tests/
+scripts/
+queries/
+.gitignore
+.mcpbignore

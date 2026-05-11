@@ -1,0 +1,65 @@
+{
+  "manifest_version": "0.4",
+  "name": "agentic-detection-lookups",
+  "display_name": "Detection Lookups",
+  "version": "0.1.0",
+  "description": "Machine-readable detection lookups for SIEM enrichment and AI agents. Check LOLBAS (Windows), GTFOBins (Linux), and process parent-child baselines via MCP tools.",
+  "long_description": "Query 800+ LOLBAS and GTFOBins binaries plus 97 parent-child process baselines without embedding data in prompts. Look up any binary to get risk level, abuse categories, and MITRE ATT&CK mappings. Search by category, MITRE technique, or free text. Purpose-built for detection engineering, threat hunting, and SOC automation.",
+  "author": {
+    "name": "Gene Kazimiarovich",
+    "url": "https://github.com/detection-forge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/detection-forge/agentic-detection-lookups.git"
+  },
+  "homepage": "https://github.com/detection-forge/agentic-detection-lookups",
+  "support": "https://github.com/detection-forge/agentic-detection-lookups/issues",
+  "server": {
+    "type": "uv",
+    "entry_point": "mcp_server/server.py"
+  },
+  "tools": [
+    {
+      "name": "lookup_binary",
+      "description": "Check if a binary is a known LOLBAS (Windows) or GTFOBins (Linux) living-off-the-land binary. Returns risk, categories, and MITRE ATT&CK mappings."
+    },
+    {
+      "name": "check_parent_child",
+      "description": "Check if a process parent-child relationship is expected or suspicious (e.g., winword.exe spawning cmd.exe)."
+    },
+    {
+      "name": "list_by_category",
+      "description": "List all binaries in a specific abuse category (e.g., Execute, shell, reverse-shell, Download)."
+    },
+    {
+      "name": "list_by_mitre",
+      "description": "List all binaries mapped to a specific MITRE ATT&CK technique (e.g., T1218, T1059, T1105)."
+    },
+    {
+      "name": "search_lookups",
+      "description": "Free-text search across all lookup files (LOLBAS, GTFOBins, parent-child baselines)."
+    },
+    {
+      "name": "list_available_lookups",
+      "description": "List all available lookup files with row counts and column schemas."
+    }
+  ],
+  "keywords": [
+    "security",
+    "detection-engineering",
+    "lolbas",
+    "gtfobins",
+    "mitre-attack",
+    "threat-hunting",
+    "siem",
+    "soc"
+  ],
+  "license": "Apache-2.0",
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "python": ">=3.10"
+    }
+  }
+}
