@@ -1,0 +1,46 @@
+name: Feature Request
+description: Suggest a new lookup file, MCP tool, or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your idea! Please describe what you'd like to see added.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of feature is this?
+      options:
+        - New Lookup File
+        - New MCP Tool
+        - New Query Examples
+        - Update Script Improvement
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the feature and why it would be useful
+      placeholder: |
+        I'd like to add a lookup for...
+        This would help detection engineers by...
+    validations:
+      required: true
+
+  - type: input
+    id: data_source
+    attributes:
+      label: Data Source
+      description: URL or reference for the upstream data (if applicable)
+      placeholder: "https://example.com/data"
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative approaches you've considered
