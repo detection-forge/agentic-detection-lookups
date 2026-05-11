@@ -32,6 +32,7 @@ class TestLookupBinary:
         assert "medium" == result["risk"]
         assert "T1105" in result["mitre_ids"]
         assert "Download" in result["categories"]
+        assert result["source"] == "lolbas"
 
     def test_known_binary_case_insensitive(self):
         result = lookup_binary("CERTUTIL.EXE")
@@ -73,6 +74,29 @@ class TestLookupBinary:
     def test_empty_string(self):
         result = lookup_binary("")
         assert result["found"] is False
+
+    def test_gtfobins_lookup(self):
+        """GTFOBins binary should be found with source='gtfobins'."""
+        result = lookup_binary("curl")
+        assert result["found"] is True
+        # curl exists in both LOLBAS and GTFOBins, so we expect matches
+        if "matches" in result:
+            sources = [m["source"] for m in result["matches"]]
+            assert "gtfobins" in sources
+        else:
+            assert result["source"] in ("lolbas", "gtfobins")
+
+    def test_gtfobins_only_binary(self):
+        """Binary only in GTFOBins (not LOLBAS)."""
+        result = lookup_binary("bash")
+        assert result["found"] is True
+        assert result["source"] == "gtfobins"
+        assert "shell" in result["categories"]
+
+    def test_gtfobins_linux_path(self):
+        """GTFOBins binary lookup with Linux path."""
+        result = lookup_binary("/usr/bin/python")
+        assert result["found"] is True
 
 
 # ---------------------------------------------------------------------------
@@ -174,6 +198,19 @@ class TestListByCategory:
         assert result["count"] == 0
         assert result["binaries"] == []
 
+    def test_gtfobins_shell_category(self):
+        """GTFOBins shell category should return Linux binaries."""
+        result = list_by_category("shell")
+        assert result["count"] > 50
+        sources = {b["source"] for b in result["binaries"]}
+        assert "gtfobins" in sources
+
+    def test_gtfobins_reverse_shell_category(self):
+        result = list_by_category("reverse-shell")
+        assert result["count"] > 0
+        filenames = [b["filename"] for b in result["binaries"]]
+        assert "bash" in filenames
+
 
 # ---------------------------------------------------------------------------
 # list_by_mitre
@@ -210,6 +247,19 @@ class TestListByMitre:
         """T1059 should match both T1059 and T1059.003, etc."""
         parent = list_by_mitre("T1059")
         assert parent["count"] >= 3  # At least the 3 from T1059 + sub-techniques
+
+    def test_t1059_includes_gtfobins(self):
+        """T1059 should return GTFOBins shell binaries as well."""
+        result = list_by_mitre("T1059")
+        sources = {b["source"] for b in result["binaries"]}
+        assert "gtfobins" in sources
+
+    def test_t1105_cross_platform(self):
+        """T1105 (Ingress Tool Transfer) should include both LOLBAS and GTFOBins."""
+        result = list_by_mitre("T1105")
+        sources = {b["source"] for b in result["binaries"]}
+        assert "lolbas" in sources
+        assert "gtfobins" in sources
 
 
 # ---------------------------------------------------------------------------
@@ -252,6 +302,13 @@ class TestSearchLookups:
         upper = search_lookups("CERTUTIL")
         assert lower["count"] == upper["count"]
 
+    def test_search_gtfobins(self):
+        """Search should include GTFOBins results."""
+        result = search_lookups("reverse-shell")
+        assert result["count"] > 0
+        sources = {r["source"] for r in result["results"]}
+        assert "gtfobins" in sources
+
 
 # ---------------------------------------------------------------------------
 # list_available_lookups
@@ -262,7 +319,7 @@ class TestListAvailableLookups:
 
     def test_returns_lookups(self):
         result = list_available_lookups()
-        assert result["count"] >= 2
+        assert result["count"] >= 3  # lolbas, parent_child, gtfobins
 
     def test_lolbas_present(self):
         result = list_available_lookups()
@@ -273,6 +330,11 @@ class TestListAvailableLookups:
         result = list_available_lookups()
         filenames = [l["filename"] for l in result["lookups"]]
         assert "parent_child_baselines.csv" in filenames
+
+    def test_gtfobins_present(self):
+        result = list_available_lookups()
+        filenames = [l["filename"] for l in result["lookups"]]
+        assert "gtfobins.csv" in filenames
 
     def test_row_counts(self):
         result = list_available_lookups()
@@ -292,6 +354,12 @@ class TestListAvailableLookups:
         expected_cols = {"parent", "child", "os", "expected", "risk_if_unexpected", "mitre_id"}
         assert expected_cols.issubset(set(pc["columns"]))
 
+    def test_gtfobins_schema(self):
+        result = list_available_lookups()
+        gtfo = next(l for l in result["lookups"] if l["filename"] == "gtfobins.csv")
+        expected_cols = {"filename", "binary_name", "categories", "mitre_ids", "risk", "description"}
+        assert expected_cols.issubset(set(gtfo["columns"]))
+
 
 # ---------------------------------------------------------------------------
 # CSV data integrity
@@ -310,13 +378,19 @@ class TestDataIntegrity:
         pc = next(l for l in result["lookups"] if l["filename"] == "parent_child_baselines.csv")
         assert pc["rows"] >= 90  # Should have 90+ baseline entries
 
+    def test_gtfobins_row_count(self):
+        result = list_available_lookups()
+        gtfo = next(l for l in result["lookups"] if l["filename"] == "gtfobins.csv")
+        assert gtfo["rows"] >= 400  # Should have 400+ GTFOBins entries
+
     def test_all_lolbas_have_risk(self):
         """Every LOLBAS entry must have a risk rating."""
         result = list_by_category("Execute")
         for binary in result["binaries"]:
-            assert binary["risk"] in ("high", "medium", "low"), (
-                f"{binary['filename']} has invalid risk: {binary['risk']}"
-            )
+            if binary.get("source") == "lolbas":
+                assert binary["risk"] in ("high", "medium", "low"), (
+                    f"{binary['filename']} has invalid risk: {binary['risk']}"
+                )
 
     def test_all_lolbas_filenames_lowercase(self):
         """Match key (filename) must be lowercase for SIEM join consistency."""
@@ -325,4 +399,22 @@ class TestDataIntegrity:
             if r["source"] == "lolbas_binaries":
                 assert r["filename"] == r["filename"].lower(), (
                     f"Filename not lowercase: {r['filename']}"
+                )
+
+    def test_all_gtfobins_have_risk(self):
+        """Every GTFOBins entry must have a valid risk rating."""
+        result = list_by_category("shell")
+        for binary in result["binaries"]:
+            if binary.get("source") == "gtfobins":
+                assert binary["risk"] in ("high", "medium", "low"), (
+                    f"{binary['filename']} has invalid risk: {binary['risk']}"
+                )
+
+    def test_all_gtfobins_filenames_lowercase(self):
+        """GTFOBins filename keys must be lowercase."""
+        result = search_lookups("gtfobins", limit=500)
+        for r in result["results"]:
+            if r["source"] == "gtfobins":
+                assert r["filename"] == r["filename"].lower(), (
+                    f"GTFOBins filename not lowercase: {r['filename']}"
                 )

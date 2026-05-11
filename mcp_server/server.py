@@ -1,8 +1,8 @@
 """Detection Lookups MCP Server.
 
 Machine-readable detection lookup tables exposed as MCP tools.
-Agents can query LOLBAS binaries, process parent-child baselines,
-and more without embedding data in prompts.
+Agents can query LOLBAS binaries (Windows), GTFOBins (Linux),
+process parent-child baselines, and more without embedding data in prompts.
 """
 
 from __future__ import annotations
@@ -21,10 +21,11 @@ mcp = FastMCP(
     "detection-lookups",
     instructions=(
         "Security detection lookup tools. Use lookup_binary to check if a Windows/Linux "
-        "binary is a known LOLBAS (Living Off The Land Binary). Use check_parent_child "
-        "to determine if a process parent-child relationship is expected or suspicious. "
-        "Use list_by_category or list_by_mitre to find binaries by attack category or "
-        "MITRE technique. Use search_lookups for freeform text search across all data."
+        "binary is a known LOLBAS (Living Off The Land Binary) or GTFOBins (Unix LOLBin). "
+        "Use check_parent_child to determine if a process parent-child relationship is "
+        "expected or suspicious. Use list_by_category or list_by_mitre to find binaries "
+        "by attack category or MITRE technique. Use search_lookups for freeform text "
+        "search across all data."
     ),
 )
 
@@ -46,6 +47,7 @@ def _match_filename(pattern: str, value: str) -> bool:
 # Cache loaded data in memory (small files, fast startup)
 _lolbas_cache: list[dict[str, str]] | None = None
 _parent_child_cache: list[dict[str, str]] | None = None
+_gtfobins_cache: list[dict[str, str]] | None = None
 
 
 def _get_lolbas() -> list[dict[str, str]]:
@@ -62,32 +64,62 @@ def _get_parent_child() -> list[dict[str, str]]:
     return _parent_child_cache
 
 
+def _get_gtfobins() -> list[dict[str, str]]:
+    global _gtfobins_cache
+    if _gtfobins_cache is None:
+        _gtfobins_cache = _load_csv("gtfobins.csv")
+    return _gtfobins_cache
+
+
 @mcp.tool()
 def lookup_binary(filename: str) -> dict[str, Any]:
-    """Check if a binary is a known LOLBAS (Living Off The Land Binary/Script/Library).
+    """Check if a binary is a known LOLBAS (Windows) or GTFOBins (Linux) living-off-the-land binary.
 
-    Provide the filename (e.g., 'certutil.exe', 'mshta.exe').
-    Returns risk level, abuse categories, MITRE ATT&CK technique IDs, and description.
-    If not found, returns {found: false}.
+    Provide the filename (e.g., 'certutil.exe', 'curl', 'python').
+    Returns risk level, abuse categories, MITRE ATT&CK technique IDs, description, and source.
+    Searches both LOLBAS (Windows) and GTFOBins (Linux) datasets.
+    If not found in either, returns {found: false}.
     """
     filename_lower = filename.lower().strip()
     # Strip path if provided
     if "\\" in filename_lower or "/" in filename_lower:
         filename_lower = filename_lower.replace("\\", "/").split("/")[-1]
 
+    results = []
+
+    # Search LOLBAS (Windows)
     for row in _get_lolbas():
         if row.get("filename", "").lower() == filename_lower:
-            return {
-                "found": True,
+            results.append({
+                "source": "lolbas",
                 "binary_name": row.get("binary_name", ""),
                 "primary_path": row.get("primary_path", ""),
                 "categories": row.get("categories", "").split("|") if row.get("categories") else [],
                 "mitre_ids": row.get("mitre_ids", "").split("|") if row.get("mitre_ids") else [],
                 "risk": row.get("risk", ""),
                 "description": row.get("description", ""),
-            }
+            })
 
-    return {"found": False, "filename": filename_lower}
+    # Search GTFOBins (Linux)
+    for row in _get_gtfobins():
+        if row.get("filename", "").lower() == filename_lower:
+            results.append({
+                "source": "gtfobins",
+                "binary_name": row.get("binary_name", ""),
+                "primary_path": row.get("primary_path", ""),
+                "categories": row.get("categories", "").split("|") if row.get("categories") else [],
+                "mitre_ids": row.get("mitre_ids", "").split("|") if row.get("mitre_ids") else [],
+                "risk": row.get("risk", ""),
+                "description": row.get("description", ""),
+            })
+
+    if not results:
+        return {"found": False, "filename": filename_lower}
+
+    # If found in one source, return that; if both, return all matches
+    if len(results) == 1:
+        return {"found": True, **results[0]}
+    return {"found": True, "matches": results}
 
 
 @mcp.tool()
@@ -151,17 +183,34 @@ def check_parent_child(
 
 @mcp.tool()
 def list_by_category(category: str) -> dict[str, Any]:
-    """List all LOLBAS binaries in a specific abuse category.
+    """List all binaries in a specific abuse category.
 
-    Valid categories: Execute, Download, Upload, AWL Bypass, UAC Bypass,
+    LOLBAS categories: Execute, Download, Upload, AWL Bypass, UAC Bypass,
     Compile, Credentials, Dump, Encode, Reconnaissance.
+    GTFOBins categories: shell, reverse-shell, bind-shell, file-read, file-write,
+    download, upload, library-load, command, inherit, privilege-escalation.
     """
     category_lower = category.lower().strip()
     results = []
+
+    # Search LOLBAS
     for row in _get_lolbas():
         categories = [c.lower() for c in row.get("categories", "").split("|") if c]
         if category_lower in categories:
             results.append({
+                "source": "lolbas",
+                "filename": row.get("filename", ""),
+                "binary_name": row.get("binary_name", ""),
+                "risk": row.get("risk", ""),
+                "mitre_ids": row.get("mitre_ids", ""),
+            })
+
+    # Search GTFOBins
+    for row in _get_gtfobins():
+        categories = [c.lower() for c in row.get("categories", "").split("|") if c]
+        if category_lower in categories:
+            results.append({
+                "source": "gtfobins",
                 "filename": row.get("filename", ""),
                 "binary_name": row.get("binary_name", ""),
                 "risk": row.get("risk", ""),
@@ -177,18 +226,31 @@ def list_by_category(category: str) -> dict[str, Any]:
 
 @mcp.tool()
 def list_by_mitre(technique_id: str) -> dict[str, Any]:
-    """List all LOLBAS binaries mapped to a specific MITRE ATT&CK technique.
+    """List all binaries (LOLBAS + GTFOBins) mapped to a specific MITRE ATT&CK technique.
 
-    Provide a technique ID like 'T1218', 'T1059.001', etc.
+    Provide a technique ID like 'T1218', 'T1059.001', 'T1105', etc.
     """
     tid = technique_id.upper().strip()
     results = []
+
+    # Search LOLBAS
     for row in _get_lolbas():
         mitre_ids = [m.upper() for m in row.get("mitre_ids", "").split("|") if m]
-        # Support hierarchy: T1059 matches T1059, T1059.001, T1059.003, etc.
-        # T1059.001 matches only T1059.001 exactly.
         if any(m == tid or m.startswith(tid + ".") for m in mitre_ids):
             results.append({
+                "source": "lolbas",
+                "filename": row.get("filename", ""),
+                "binary_name": row.get("binary_name", ""),
+                "categories": row.get("categories", ""),
+                "risk": row.get("risk", ""),
+            })
+
+    # Search GTFOBins
+    for row in _get_gtfobins():
+        mitre_ids = [m.upper() for m in row.get("mitre_ids", "").split("|") if m]
+        if any(m == tid or m.startswith(tid + ".") for m in mitre_ids):
+            results.append({
+                "source": "gtfobins",
                 "filename": row.get("filename", ""),
                 "binary_name": row.get("binary_name", ""),
                 "categories": row.get("categories", ""),
@@ -206,7 +268,8 @@ def list_by_mitre(technique_id: str) -> dict[str, Any]:
 def search_lookups(query: str, limit: int = 20) -> dict[str, Any]:
     """Search across all lookup files for a text match.
 
-    Searches filename, description, categories, MITRE IDs, and notes fields.
+    Searches filename, description, categories, MITRE IDs, and notes fields
+    across LOLBAS, GTFOBins, and parent-child baselines.
     Returns up to `limit` results (default 20).
     """
     query_lower = query.lower().strip()
@@ -227,6 +290,20 @@ def search_lookups(query: str, limit: int = 20) -> dict[str, Any]:
             })
             if len(results) >= limit:
                 break
+
+    # Search GTFOBins
+    if len(results) < limit:
+        for row in _get_gtfobins():
+            searchable = " ".join(row.values()).lower()
+            if query_lower in searchable:
+                results.append({
+                    "source": "gtfobins",
+                    "filename": row.get("filename", ""),
+                    "match_context": row.get("description", ""),
+                    "risk": row.get("risk", ""),
+                })
+                if len(results) >= limit:
+                    break
 
     # Search parent-child baselines
     if len(results) < limit:
