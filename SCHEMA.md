@@ -57,3 +57,25 @@ Every lookup file MUST include:
 | `mitre_id` | string | MITRE technique if suspicious |
 | `context` | string | When conditional — what makes it legit |
 | `notes` | string | Triage guidance |
+
+### gtfobins.csv
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `filename` | string | Match key — lowercase binary name |
+| `binary_name` | string | Original case binary name |
+| `primary_path` | string | Common Linux path (typically `/usr/bin/<name>`) |
+| `categories` | string | Pipe-delimited GTFOBins function types |
+| `mitre_ids` | string | Pipe-delimited MITRE technique IDs |
+| `risk` | string | `high`, `medium`, or `low` |
+| `description` | string | Summary of abuse capabilities |
+
+**GTFOBins categories:** `shell`, `reverse-shell`, `bind-shell`,
+`non-interactive-bind-shell`, `non-interactive-reverse-shell`, `file-read`,
+`file-write`, `download`, `upload`, `library-load`, `command`, `inherit`,
+`privilege-escalation`
+
+**Risk mapping:**
+- **High:** reverse-shell, bind-shell, library-load, privilege-escalation
+- **Medium:** shell, command, file-write, download, upload, inherit
+- **Low:** file-read only

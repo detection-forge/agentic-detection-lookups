@@ -1,0 +1,478 @@
+filename,binary_name,primary_path,categories,mitre_ids,risk,description
+7z,7z,/usr/bin/7z,file-read,T1005,low,GTFOBins: 7z can be used for file-read
+aa-exec,aa-exec,/usr/bin/aa-exec,shell,T1059,medium,GTFOBins: aa-exec can be used for shell
+ab,ab,/usr/bin/ab,download|upload,T1048|T1105,medium,GTFOBins: ab can be used for download; upload
+acr,acr,/usr/bin/acr,command,T1059,medium,GTFOBins: acr can be used for command
+agetty,agetty,/usr/bin/agetty,shell,T1059,medium,GTFOBins: agetty can be used for shell
+alpine,alpine,/usr/bin/alpine,file-read,T1005,low,GTFOBins: alpine can be used for file-read
+ansible-playbook,ansible-playbook,/usr/bin/ansible-playbook,shell,T1059,medium,GTFOBins: ansible-playbook can be used for shell
+ansible-test,ansible-test,/usr/bin/ansible-test,shell,T1059,medium,GTFOBins: ansible-test can be used for shell
+aoss,aoss,/usr/bin/aoss,shell,T1059,medium,GTFOBins: aoss can be used for shell
+apache2,apache2,/usr/bin/apache2,file-read,T1005,low,GTFOBins: apache2 can be used for file-read
+apache2ctl,apache2ctl,/usr/bin/apache2ctl,file-read,T1005,low,GTFOBins: apache2ctl can be used for file-read
+apport-cli,apport-cli,/usr/bin/apport-cli,inherit,T1059,medium,GTFOBins: apport-cli can be used for inherit
+apt,apt,/usr/bin/apt,inherit|shell,T1059,medium,GTFOBins: apt can be used for inherit; shell
+apt-get,apt-get,/usr/bin/apt-get,inherit|shell,T1059,medium,GTFOBins: apt-get can be used for inherit; shell
+aptitude,aptitude,/usr/bin/aptitude,inherit,T1059,medium,GTFOBins: aptitude can be used for inherit
+ar,ar,/usr/bin/ar,file-read,T1005,low,GTFOBins: ar can be used for file-read
+arch-nspawn,arch-nspawn,/usr/bin/arch-nspawn,shell,T1059,medium,GTFOBins: arch-nspawn can be used for shell
+aria2c,aria2c,/usr/bin/aria2c,command|download|file-read,T1005|T1059|T1105,medium,GTFOBins: aria2c can be used for command; download; file-read
+arj,arj,/usr/bin/arj,file-read|file-write,T1005|T1565.001,medium,GTFOBins: arj can be used for file-read; file-write
+arp,arp,/usr/bin/arp,file-read,T1005,low,GTFOBins: arp can be used for file-read
+as,as,/usr/bin/as,file-read,T1005,low,GTFOBins: as can be used for file-read
+ascii-xfr,ascii-xfr,/usr/bin/ascii-xfr,file-read,T1005,low,GTFOBins: ascii-xfr can be used for file-read
+ascii85,ascii85,/usr/bin/ascii85,file-read,T1005,low,GTFOBins: ascii85 can be used for file-read
+ash,ash,/usr/bin/ash,file-write|shell,T1059|T1565.001,medium,GTFOBins: ash can be used for file-write; shell
+aspell,aspell,/usr/bin/aspell,file-read,T1005,low,GTFOBins: aspell can be used for file-read
+asterisk,asterisk,/usr/bin/asterisk,shell,T1059,medium,GTFOBins: asterisk can be used for shell
+at,at,/usr/bin/at,command|shell,T1059,medium,GTFOBins: at can be used for command; shell
+atobm,atobm,/usr/bin/atobm,file-read,T1005,low,GTFOBins: atobm can be used for file-read
+autoconf,autoconf,/usr/bin/autoconf,shell,T1059,medium,GTFOBins: autoconf can be used for shell
+autoheader,autoheader,/usr/bin/autoheader,shell,T1059,medium,GTFOBins: autoheader can be used for shell
+autoreconf,autoreconf,/usr/bin/autoreconf,shell,T1059,medium,GTFOBins: autoreconf can be used for shell
+awk,awk,/usr/bin/awk,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: awk can be used for file-read; file-write; shell
+aws,aws,/usr/bin/aws,file-read|inherit,T1005|T1059,medium,GTFOBins: aws can be used for file-read; inherit
+base32,base32,/usr/bin/base32,file-read,T1005,low,GTFOBins: base32 can be used for file-read
+base58,base58,/usr/bin/base58,file-read,T1005,low,GTFOBins: base58 can be used for file-read
+base64,base64,/usr/bin/base64,file-read,T1005,low,GTFOBins: base64 can be used for file-read
+basenc,basenc,/usr/bin/basenc,file-read,T1005,low,GTFOBins: basenc can be used for file-read
+basez,basez,/usr/bin/basez,file-read,T1005,low,GTFOBins: basez can be used for file-read
+bash,bash,/usr/bin/bash,download|file-read|file-write|library-load|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001|T1574.006,high,GTFOBins: bash can be used for download; file-read; file-write; library-load; reverse-shell; shell; upload
+bashbug,bashbug,/usr/bin/bashbug,inherit,T1059,medium,GTFOBins: bashbug can be used for inherit
+batcat,batcat,/usr/bin/batcat,inherit,T1059,medium,GTFOBins: batcat can be used for inherit
+bbot,bbot,/usr/bin/bbot,file-read,T1005,low,GTFOBins: bbot can be used for file-read
+bc,bc,/usr/bin/bc,file-read,T1005,low,GTFOBins: bc can be used for file-read
+bconsole,bconsole,/usr/bin/bconsole,file-read|shell,T1005|T1059,medium,GTFOBins: bconsole can be used for file-read; shell
+bee,bee,/usr/bin/bee,inherit,T1059,medium,GTFOBins: bee can be used for inherit
+borg,borg,/usr/bin/borg,shell,T1059,medium,GTFOBins: borg can be used for shell
+bpftrace,bpftrace,/usr/bin/bpftrace,shell,T1059,medium,GTFOBins: bpftrace can be used for shell
+bridge,bridge,/usr/bin/bridge,file-read,T1005,low,GTFOBins: bridge can be used for file-read
+bundle,bundle,/usr/bin/bundle,inherit|shell,T1059,medium,GTFOBins: bundle can be used for inherit; shell
+bundler,bundler,/usr/bin/bundler,inherit|shell,T1059,medium,GTFOBins: bundler can be used for inherit; shell
+busctl,busctl,/usr/bin/busctl,inherit|shell,T1059,medium,GTFOBins: busctl can be used for inherit; shell
+busybox,busybox,/usr/bin/busybox,inherit|reverse-shell|upload,T1048|T1059,high,GTFOBins: busybox can be used for inherit; reverse-shell; upload
+byebug,byebug,/usr/bin/byebug,inherit,T1059,medium,GTFOBins: byebug can be used for inherit
+bzip2,bzip2,/usr/bin/bzip2,file-read,T1005,low,GTFOBins: bzip2 can be used for file-read
+c89,c89,/usr/bin/c89,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: c89 can be used for file-read; file-write; shell
+c99,c99,/usr/bin/c99,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: c99 can be used for file-read; file-write; shell
+cabal,cabal,/usr/bin/cabal,shell,T1059,medium,GTFOBins: cabal can be used for shell
+cancel,cancel,/usr/bin/cancel,upload,T1048,medium,GTFOBins: cancel can be used for upload
+capsh,capsh,/usr/bin/capsh,shell,T1059,medium,GTFOBins: capsh can be used for shell
+cargo,cargo,/usr/bin/cargo,inherit,T1059,medium,GTFOBins: cargo can be used for inherit
+cat,cat,/usr/bin/cat,file-read,T1005,low,GTFOBins: cat can be used for file-read
+cc,cc,/usr/bin/cc,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: cc can be used for file-read; file-write; shell
+cdist,cdist,/usr/bin/cdist,shell,T1059,medium,GTFOBins: cdist can be used for shell
+certbot,certbot,/usr/bin/certbot,shell,T1059,medium,GTFOBins: certbot can be used for shell
+chattr,chattr,/usr/bin/chattr,privilege-escalation,T1548,high,GTFOBins: chattr can be used for privilege-escalation
+check_by_ssh,check_by_ssh,/usr/bin/check_by_ssh,shell,T1059,medium,GTFOBins: check_by_ssh can be used for shell
+check_cups,check_cups,/usr/bin/check_cups,file-read,T1005,low,GTFOBins: check_cups can be used for file-read
+check_log,check_log,/usr/bin/check_log,file-read|file-write,T1005|T1565.001,medium,GTFOBins: check_log can be used for file-read; file-write
+check_memory,check_memory,/usr/bin/check_memory,file-read,T1005,low,GTFOBins: check_memory can be used for file-read
+check_raid,check_raid,/usr/bin/check_raid,file-read,T1005,low,GTFOBins: check_raid can be used for file-read
+check_ssl_cert,check_ssl_cert,/usr/bin/check_ssl_cert,shell,T1059,medium,GTFOBins: check_ssl_cert can be used for shell
+check_statusfile,check_statusfile,/usr/bin/check_statusfile,file-read,T1005,low,GTFOBins: check_statusfile can be used for file-read
+chmod,chmod,/usr/bin/chmod,privilege-escalation,T1548,high,GTFOBins: chmod can be used for privilege-escalation
+choom,choom,/usr/bin/choom,shell,T1059,medium,GTFOBins: choom can be used for shell
+chown,chown,/usr/bin/chown,privilege-escalation,T1548,high,GTFOBins: chown can be used for privilege-escalation
+chroot,chroot,/usr/bin/chroot,shell,T1059,medium,GTFOBins: chroot can be used for shell
+chrt,chrt,/usr/bin/chrt,shell,T1059,medium,GTFOBins: chrt can be used for shell
+clamscan,clamscan,/usr/bin/clamscan,file-read,T1005,low,GTFOBins: clamscan can be used for file-read
+clisp,clisp,/usr/bin/clisp,shell,T1059,medium,GTFOBins: clisp can be used for shell
+cmake,cmake,/usr/bin/cmake,file-read|shell,T1005|T1059,medium,GTFOBins: cmake can be used for file-read; shell
+cmp,cmp,/usr/bin/cmp,file-read,T1005,low,GTFOBins: cmp can be used for file-read
+cobc,cobc,/usr/bin/cobc,shell,T1059,medium,GTFOBins: cobc can be used for shell
+code,code,/usr/bin/code,download|reverse-shell|upload,T1048|T1059|T1105,high,GTFOBins: code can be used for download; reverse-shell; upload
+codex,codex,/usr/bin/codex,shell,T1059,medium,GTFOBins: codex can be used for shell
+column,column,/usr/bin/column,file-read,T1005,low,GTFOBins: column can be used for file-read
+comm,comm,/usr/bin/comm,file-read,T1005,low,GTFOBins: comm can be used for file-read
+composer,composer,/usr/bin/composer,shell,T1059,medium,GTFOBins: composer can be used for shell
+cowsay,cowsay,/usr/bin/cowsay,inherit,T1059,medium,GTFOBins: cowsay can be used for inherit
+cowthink,cowthink,/usr/bin/cowthink,inherit,T1059,medium,GTFOBins: cowthink can be used for inherit
+cp,cp,/usr/bin/cp,file-read|file-write|privilege-escalation,T1005|T1548|T1565.001,high,GTFOBins: cp can be used for file-read; file-write; privilege-escalation
+cpan,cpan,/usr/bin/cpan,inherit,T1059,medium,GTFOBins: cpan can be used for inherit
+cpio,cpio,/usr/bin/cpio,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: cpio can be used for file-read; file-write; shell
+cpulimit,cpulimit,/usr/bin/cpulimit,shell,T1059,medium,GTFOBins: cpulimit can be used for shell
+crash,crash,/usr/bin/crash,command|inherit,T1059,medium,GTFOBins: crash can be used for command; inherit
+crontab,crontab,/usr/bin/crontab,command|inherit,T1059,medium,GTFOBins: crontab can be used for command; inherit
+csh,csh,/usr/bin/csh,file-write|shell,T1059|T1565.001,medium,GTFOBins: csh can be used for file-write; shell
+csplit,csplit,/usr/bin/csplit,file-read|file-write,T1005|T1565.001,medium,GTFOBins: csplit can be used for file-read; file-write
+csvtool,csvtool,/usr/bin/csvtool,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: csvtool can be used for file-read; file-write; shell
+ctr,ctr,/usr/bin/ctr,shell,T1059,medium,GTFOBins: ctr can be used for shell
+cupsfilter,cupsfilter,/usr/bin/cupsfilter,file-read,T1005,low,GTFOBins: cupsfilter can be used for file-read
+curl,curl,/usr/bin/curl,download|file-read|file-write|library-load|upload,T1005|T1048|T1105|T1565.001|T1574.006,high,GTFOBins: curl can be used for download; file-read; file-write; library-load; upload
+cut,cut,/usr/bin/cut,file-read,T1005,low,GTFOBins: cut can be used for file-read
+dash,dash,/usr/bin/dash,file-write|shell,T1059|T1565.001,medium,GTFOBins: dash can be used for file-write; shell
+date,date,/usr/bin/date,file-read,T1005,low,GTFOBins: date can be used for file-read
+dc,dc,/usr/bin/dc,shell,T1059,medium,GTFOBins: dc can be used for shell
+dd,dd,/usr/bin/dd,file-read|file-write,T1005|T1565.001,medium,GTFOBins: dd can be used for file-read; file-write
+debugfs,debugfs,/usr/bin/debugfs,shell,T1059,medium,GTFOBins: debugfs can be used for shell
+dhclient,dhclient,/usr/bin/dhclient,shell,T1059,medium,GTFOBins: dhclient can be used for shell
+dialog,dialog,/usr/bin/dialog,file-read,T1005,low,GTFOBins: dialog can be used for file-read
+diff,diff,/usr/bin/diff,file-read,T1005,low,GTFOBins: diff can be used for file-read
+dig,dig,/usr/bin/dig,file-read,T1005,low,GTFOBins: dig can be used for file-read
+distcc,distcc,/usr/bin/distcc,shell,T1059,medium,GTFOBins: distcc can be used for shell
+dmesg,dmesg,/usr/bin/dmesg,file-read|inherit,T1005|T1059,medium,GTFOBins: dmesg can be used for file-read; inherit
+dmidecode,dmidecode,/usr/bin/dmidecode,file-write,T1565.001,medium,GTFOBins: dmidecode can be used for file-write
+dmsetup,dmsetup,/usr/bin/dmsetup,shell,T1059,medium,GTFOBins: dmsetup can be used for shell
+dnf,dnf,/usr/bin/dnf,command,T1059,medium,GTFOBins: dnf can be used for command
+dnsmasq,dnsmasq,/usr/bin/dnsmasq,command,T1059,medium,GTFOBins: dnsmasq can be used for command
+doas,doas,/usr/bin/doas,shell,T1059,medium,GTFOBins: doas can be used for shell
+docker,docker,/usr/bin/docker,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: docker can be used for file-read; file-write; shell
+dos2unix,dos2unix,/usr/bin/dos2unix,file-read|file-write,T1005|T1565.001,medium,GTFOBins: dos2unix can be used for file-read; file-write
+dosbox,dosbox,/usr/bin/dosbox,file-read|file-write,T1005|T1565.001,medium,GTFOBins: dosbox can be used for file-read; file-write
+dotnet,dotnet,/usr/bin/dotnet,file-read|shell,T1005|T1059,medium,GTFOBins: dotnet can be used for file-read; shell
+dpkg,dpkg,/usr/bin/dpkg,inherit|shell,T1059,medium,GTFOBins: dpkg can be used for inherit; shell
+dstat,dstat,/usr/bin/dstat,inherit,T1059,medium,GTFOBins: dstat can be used for inherit
+dvips,dvips,/usr/bin/dvips,shell,T1059,medium,GTFOBins: dvips can be used for shell
+easy_install,easy_install,/usr/bin/easy_install,inherit,T1059,medium,GTFOBins: easy_install can be used for inherit
+easyrsa,easyrsa,/usr/bin/easyrsa,shell,T1059,medium,GTFOBins: easyrsa can be used for shell
+eb,eb,/usr/bin/eb,inherit,T1059,medium,GTFOBins: eb can be used for inherit
+ed,ed,/usr/bin/ed,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: ed can be used for file-read; file-write; shell
+efax,efax,/usr/bin/efax,file-read,T1005,low,GTFOBins: efax can be used for file-read
+egrep,egrep,/usr/bin/egrep,file-read,T1005,low,GTFOBins: egrep can be used for file-read
+elvish,elvish,/usr/bin/elvish,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: elvish can be used for file-read; file-write; shell
+emacs,emacs,/usr/bin/emacs,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: emacs can be used for file-read; file-write; shell
+enscript,enscript,/usr/bin/enscript,shell,T1059,medium,GTFOBins: enscript can be used for shell
+env,env,/usr/bin/env,shell,T1059,medium,GTFOBins: env can be used for shell
+eqn,eqn,/usr/bin/eqn,file-read,T1005,low,GTFOBins: eqn can be used for file-read
+espeak,espeak,/usr/bin/espeak,file-read,T1005,low,GTFOBins: espeak can be used for file-read
+ex,ex,/usr/bin/ex,inherit|shell,T1059,medium,GTFOBins: ex can be used for inherit; shell
+exiftool,exiftool,/usr/bin/exiftool,file-read|file-write|inherit,T1005|T1059|T1565.001,medium,GTFOBins: exiftool can be used for file-read; file-write; inherit
+expand,expand,/usr/bin/expand,file-read,T1005,low,GTFOBins: expand can be used for file-read
+expect,expect,/usr/bin/expect,file-read|shell,T1005|T1059,medium,GTFOBins: expect can be used for file-read; shell
+facter,facter,/usr/bin/facter,inherit,T1059,medium,GTFOBins: facter can be used for inherit
+fail2ban-client,fail2ban-client,/usr/bin/fail2ban-client,command,T1059,medium,GTFOBins: fail2ban-client can be used for command
+fastfetch,fastfetch,/usr/bin/fastfetch,command|file-read|shell,T1005|T1059,medium,GTFOBins: fastfetch can be used for command; file-read; shell
+ffmpeg,ffmpeg,/usr/bin/ffmpeg,library-load,T1574.006,high,GTFOBins: ffmpeg can be used for library-load
+fgrep,fgrep,/usr/bin/fgrep,file-read,T1005,low,GTFOBins: fgrep can be used for file-read
+file,file,/usr/bin/file,file-read,T1005,low,GTFOBins: file can be used for file-read
+find,find,/usr/bin/find,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: find can be used for file-read; file-write; shell
+finger,finger,/usr/bin/finger,download|upload,T1048|T1105,medium,GTFOBins: finger can be used for download; upload
+firejail,firejail,/usr/bin/firejail,shell,T1059,medium,GTFOBins: firejail can be used for shell
+fish,fish,/usr/bin/fish,shell,T1059,medium,GTFOBins: fish can be used for shell
+flock,flock,/usr/bin/flock,shell,T1059,medium,GTFOBins: flock can be used for shell
+fmt,fmt,/usr/bin/fmt,file-read,T1005,low,GTFOBins: fmt can be used for file-read
+fold,fold,/usr/bin/fold,file-read,T1005,low,GTFOBins: fold can be used for file-read
+forge,forge,/usr/bin/forge,shell,T1059,medium,GTFOBins: forge can be used for shell
+fping,fping,/usr/bin/fping,file-read,T1005,low,GTFOBins: fping can be used for file-read
+ftp,ftp,/usr/bin/ftp,download|shell|upload,T1048|T1059|T1105,medium,GTFOBins: ftp can be used for download; shell; upload
+fzf,fzf,/usr/bin/fzf,command|shell,T1059,medium,GTFOBins: fzf can be used for command; shell
+g++,g++,/usr/bin/g++,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: g++ can be used for file-read; file-write; shell
+gawk,gawk,/usr/bin/gawk,bind-shell|file-read|file-write|reverse-shell|shell,T1005|T1059|T1565.001,high,GTFOBins: gawk can be used for bind-shell; file-read; file-write; reverse-shell; shell
+gcc,gcc,/usr/bin/gcc,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: gcc can be used for file-read; file-write; shell
+gcloud,gcloud,/usr/bin/gcloud,inherit,T1059,medium,GTFOBins: gcloud can be used for inherit
+gcore,gcore,/usr/bin/gcore,file-read,T1005,low,GTFOBins: gcore can be used for file-read
+gdb,gdb,/usr/bin/gdb,file-write|inherit|shell,T1059|T1565.001,medium,GTFOBins: gdb can be used for file-write; inherit; shell
+gem,gem,/usr/bin/gem,inherit|shell,T1059,medium,GTFOBins: gem can be used for inherit; shell
+genie,genie,/usr/bin/genie,shell,T1059,medium,GTFOBins: genie can be used for shell
+genisoimage,genisoimage,/usr/bin/genisoimage,file-read,T1005,low,GTFOBins: genisoimage can be used for file-read
+getent,getent,/usr/bin/getent,privilege-escalation,T1548,high,GTFOBins: getent can be used for privilege-escalation
+ghc,ghc,/usr/bin/ghc,shell,T1059,medium,GTFOBins: ghc can be used for shell
+ghci,ghci,/usr/bin/ghci,shell,T1059,medium,GTFOBins: ghci can be used for shell
+gimp,gimp,/usr/bin/gimp,inherit,T1059,medium,GTFOBins: gimp can be used for inherit
+ginsh,ginsh,/usr/bin/ginsh,shell,T1059,medium,GTFOBins: ginsh can be used for shell
+git,git,/usr/bin/git,file-read|file-write|inherit|shell,T1005|T1059|T1565.001,medium,GTFOBins: git can be used for file-read; file-write; inherit; shell
+gnuplot,gnuplot,/usr/bin/gnuplot,shell,T1059,medium,GTFOBins: gnuplot can be used for shell
+go,go,/usr/bin/go,bind-shell|file-read|file-write|reverse-shell|shell,T1005|T1059|T1565.001,high,GTFOBins: go can be used for bind-shell; file-read; file-write; reverse-shell; shell
+grc,grc,/usr/bin/grc,shell,T1059,medium,GTFOBins: grc can be used for shell
+grep,grep,/usr/bin/grep,file-read,T1005,low,GTFOBins: grep can be used for file-read
+gtester,gtester,/usr/bin/gtester,file-write|shell,T1059|T1565.001,medium,GTFOBins: gtester can be used for file-write; shell
+guile,guile,/usr/bin/guile,shell,T1059,medium,GTFOBins: guile can be used for shell
+gzip,gzip,/usr/bin/gzip,file-read,T1005,low,GTFOBins: gzip can be used for file-read
+hashcat,hashcat,/usr/bin/hashcat,file-write,T1565.001,medium,GTFOBins: hashcat can be used for file-write
+hd,hd,/usr/bin/hd,file-read,T1005,low,GTFOBins: hd can be used for file-read
+head,head,/usr/bin/head,file-read,T1005,low,GTFOBins: head can be used for file-read
+hexdump,hexdump,/usr/bin/hexdump,file-read,T1005,low,GTFOBins: hexdump can be used for file-read
+hg,hg,/usr/bin/hg,shell,T1059,medium,GTFOBins: hg can be used for shell
+highlight,highlight,/usr/bin/highlight,file-read,T1005,low,GTFOBins: highlight can be used for file-read
+hping3,hping3,/usr/bin/hping3,shell|upload,T1048|T1059,medium,GTFOBins: hping3 can be used for shell; upload
+iconv,iconv,/usr/bin/iconv,file-read|file-write,T1005|T1565.001,medium,GTFOBins: iconv can be used for file-read; file-write
+iftop,iftop,/usr/bin/iftop,shell,T1059,medium,GTFOBins: iftop can be used for shell
+install,install,/usr/bin/install,privilege-escalation,T1548,high,GTFOBins: install can be used for privilege-escalation
+ionice,ionice,/usr/bin/ionice,shell,T1059,medium,GTFOBins: ionice can be used for shell
+ip,ip,/usr/bin/ip,file-read|shell,T1005|T1059,medium,GTFOBins: ip can be used for file-read; shell
+iptables-save,iptables-save,/usr/bin/iptables-save,file-write,T1565.001,medium,GTFOBins: iptables-save can be used for file-write
+irb,irb,/usr/bin/irb,inherit,T1059,medium,GTFOBins: irb can be used for inherit
+ispell,ispell,/usr/bin/ispell,shell,T1059,medium,GTFOBins: ispell can be used for shell
+java,java,/usr/bin/java,shell,T1059,medium,GTFOBins: java can be used for shell
+jjs,jjs,/usr/bin/jjs,download|file-read|file-write|reverse-shell|shell,T1005|T1059|T1105|T1565.001,high,GTFOBins: jjs can be used for download; file-read; file-write; reverse-shell; shell
+joe,joe,/usr/bin/joe,shell,T1059,medium,GTFOBins: joe can be used for shell
+join,join,/usr/bin/join,file-read,T1005,low,GTFOBins: join can be used for file-read
+journalctl,journalctl,/usr/bin/journalctl,inherit,T1059,medium,GTFOBins: journalctl can be used for inherit
+jq,jq,/usr/bin/jq,file-read,T1005,low,GTFOBins: jq can be used for file-read
+jrunscript,jrunscript,/usr/bin/jrunscript,download|file-read|file-write|reverse-shell|shell,T1005|T1059|T1105|T1565.001,high,GTFOBins: jrunscript can be used for download; file-read; file-write; reverse-shell; shell
+jshell,jshell,/usr/bin/jshell,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: jshell can be used for file-read; file-write; shell
+jtag,jtag,/usr/bin/jtag,shell,T1059,medium,GTFOBins: jtag can be used for shell
+julia,julia,/usr/bin/julia,download|file-read|file-write|reverse-shell|shell,T1005|T1059|T1105|T1565.001,high,GTFOBins: julia can be used for download; file-read; file-write; reverse-shell; shell
+knife,knife,/usr/bin/knife,inherit,T1059,medium,GTFOBins: knife can be used for inherit
+ksh,ksh,/usr/bin/ksh,download|file-read|file-write|library-load|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001|T1574.006,high,GTFOBins: ksh can be used for download; file-read; file-write; library-load; reverse-shell; shell; upload
+ksshell,ksshell,/usr/bin/ksshell,file-read,T1005,low,GTFOBins: ksshell can be used for file-read
+ksu,ksu,/usr/bin/ksu,shell,T1059,medium,GTFOBins: ksu can be used for shell
+kubectl,kubectl,/usr/bin/kubectl,shell|upload,T1048|T1059,medium,GTFOBins: kubectl can be used for shell; upload
+last,last,/usr/bin/last,file-read,T1005,low,GTFOBins: last can be used for file-read
+lastb,lastb,/usr/bin/lastb,file-read,T1005,low,GTFOBins: lastb can be used for file-read
+latex,latex,/usr/bin/latex,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: latex can be used for file-read; file-write; shell
+latexmk,latexmk,/usr/bin/latexmk,file-read|inherit|shell,T1005|T1059,medium,GTFOBins: latexmk can be used for file-read; inherit; shell
+ld.so,ld.so,/usr/bin/ld.so,shell,T1059,medium,GTFOBins: ld.so can be used for shell
+ldconfig,ldconfig,/usr/bin/ldconfig,library-load,T1574.006,high,GTFOBins: ldconfig can be used for library-load
+less,less,/usr/bin/less,command|file-read|file-write|inherit|shell,T1005|T1059|T1565.001,medium,GTFOBins: less can be used for command; file-read; file-write; inherit; shell
+lftp,lftp,/usr/bin/lftp,shell,T1059,medium,GTFOBins: lftp can be used for shell
+links,links,/usr/bin/links,file-read,T1005,low,GTFOBins: links can be used for file-read
+ln,ln,/usr/bin/ln,privilege-escalation,T1548,high,GTFOBins: ln can be used for privilege-escalation
+loginctl,loginctl,/usr/bin/loginctl,shell,T1059,medium,GTFOBins: loginctl can be used for shell
+logrotate,logrotate,/usr/bin/logrotate,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: logrotate can be used for file-read; file-write; shell
+logsave,logsave,/usr/bin/logsave,shell,T1059,medium,GTFOBins: logsave can be used for shell
+look,look,/usr/bin/look,file-read,T1005,low,GTFOBins: look can be used for file-read
+lp,lp,/usr/bin/lp,upload,T1048,medium,GTFOBins: lp can be used for upload
+ltrace,ltrace,/usr/bin/ltrace,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: ltrace can be used for file-read; file-write; shell
+lua,lua,/usr/bin/lua,bind-shell|download|file-read|file-write|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001,high,GTFOBins: lua can be used for bind-shell; download; file-read; file-write; reverse-shell; shell; upload
+lualatex,lualatex,/usr/bin/lualatex,inherit,T1059,medium,GTFOBins: lualatex can be used for inherit
+luatex,luatex,/usr/bin/luatex,inherit,T1059,medium,GTFOBins: luatex can be used for inherit
+lwp-download,lwp-download,/usr/bin/lwp-download,download|file-read|file-write,T1005|T1105|T1565.001,medium,GTFOBins: lwp-download can be used for download; file-read; file-write
+lwp-request,lwp-request,/usr/bin/lwp-request,file-read,T1005,low,GTFOBins: lwp-request can be used for file-read
+lxd,lxd,/usr/bin/lxd,shell,T1059,medium,GTFOBins: lxd can be used for shell
+m4,m4,/usr/bin/m4,command|file-read|shell,T1005|T1059,medium,GTFOBins: m4 can be used for command; file-read; shell
+mail,mail,/usr/bin/mail,shell,T1059,medium,GTFOBins: mail can be used for shell
+make,make,/usr/bin/make,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: make can be used for file-read; file-write; shell
+man,man,/usr/bin/man,file-read|inherit|shell,T1005|T1059,medium,GTFOBins: man can be used for file-read; inherit; shell
+mawk,mawk,/usr/bin/mawk,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: mawk can be used for file-read; file-write; shell
+minicom,minicom,/usr/bin/minicom,shell,T1059,medium,GTFOBins: minicom can be used for shell
+more,more,/usr/bin/more,file-read|shell,T1005|T1059,medium,GTFOBins: more can be used for file-read; shell
+mosh-server,mosh-server,/usr/bin/mosh-server,shell,T1059,medium,GTFOBins: mosh-server can be used for shell
+mosquitto,mosquitto,/usr/bin/mosquitto,file-read,T1005,low,GTFOBins: mosquitto can be used for file-read
+mount,mount,/usr/bin/mount,privilege-escalation,T1548,high,GTFOBins: mount can be used for privilege-escalation
+msfconsole,msfconsole,/usr/bin/msfconsole,inherit,T1059,medium,GTFOBins: msfconsole can be used for inherit
+msgattrib,msgattrib,/usr/bin/msgattrib,file-read,T1005,low,GTFOBins: msgattrib can be used for file-read
+msgcat,msgcat,/usr/bin/msgcat,file-read,T1005,low,GTFOBins: msgcat can be used for file-read
+msgconv,msgconv,/usr/bin/msgconv,file-read,T1005,low,GTFOBins: msgconv can be used for file-read
+msgfilter,msgfilter,/usr/bin/msgfilter,file-read|shell,T1005|T1059,medium,GTFOBins: msgfilter can be used for file-read; shell
+msgmerge,msgmerge,/usr/bin/msgmerge,file-read,T1005,low,GTFOBins: msgmerge can be used for file-read
+msguniq,msguniq,/usr/bin/msguniq,file-read,T1005,low,GTFOBins: msguniq can be used for file-read
+mtr,mtr,/usr/bin/mtr,file-read,T1005,low,GTFOBins: mtr can be used for file-read
+multitime,multitime,/usr/bin/multitime,shell,T1059,medium,GTFOBins: multitime can be used for shell
+mutt,mutt,/usr/bin/mutt,file-read,T1005,low,GTFOBins: mutt can be used for file-read
+mv,mv,/usr/bin/mv,file-write|privilege-escalation,T1548|T1565.001,high,GTFOBins: mv can be used for file-write; privilege-escalation
+mypy,mypy,/usr/bin/mypy,file-read|file-write,T1005|T1565.001,medium,GTFOBins: mypy can be used for file-read; file-write
+mysql,mysql,/usr/bin/mysql,library-load|shell,T1059|T1574.006,high,GTFOBins: mysql can be used for library-load; shell
+nano,nano,/usr/bin/nano,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: nano can be used for file-read; file-write; shell
+nasm,nasm,/usr/bin/nasm,file-read,T1005,low,GTFOBins: nasm can be used for file-read
+nawk,nawk,/usr/bin/nawk,bind-shell|file-read|file-write|reverse-shell|shell,T1005|T1059|T1565.001,high,GTFOBins: nawk can be used for bind-shell; file-read; file-write; reverse-shell; shell
+nc,nc,/usr/bin/nc,bind-shell|download|reverse-shell|upload,T1048|T1059|T1105,high,GTFOBins: nc can be used for bind-shell; download; reverse-shell; upload
+ncdu,ncdu,/usr/bin/ncdu,shell,T1059,medium,GTFOBins: ncdu can be used for shell
+ncftp,ncftp,/usr/bin/ncftp,shell,T1059,medium,GTFOBins: ncftp can be used for shell
+needrestart,needrestart,/usr/bin/needrestart,inherit,T1059,medium,GTFOBins: needrestart can be used for inherit
+neofetch,neofetch,/usr/bin/neofetch,file-read|shell,T1005|T1059,medium,GTFOBins: neofetch can be used for file-read; shell
+nft,nft,/usr/bin/nft,file-read,T1005,low,GTFOBins: nft can be used for file-read
+nginx,nginx,/usr/bin/nginx,download|library-load|upload,T1048|T1105|T1574.006,high,GTFOBins: nginx can be used for download; library-load; upload
+nice,nice,/usr/bin/nice,shell,T1059,medium,GTFOBins: nice can be used for shell
+nl,nl,/usr/bin/nl,file-read,T1005,low,GTFOBins: nl can be used for file-read
+nm,nm,/usr/bin/nm,file-read,T1005,low,GTFOBins: nm can be used for file-read
+nmap,nmap,/usr/bin/nmap,file-read|file-write|inherit|shell,T1005|T1059|T1565.001,medium,GTFOBins: nmap can be used for file-read; file-write; inherit; shell
+node,node,/usr/bin/node,bind-shell|download|file-read|file-write|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001,high,GTFOBins: node can be used for bind-shell; download; file-read; file-write; reverse-shell; shell; upload
+nohup,nohup,/usr/bin/nohup,command|shell,T1059,medium,GTFOBins: nohup can be used for command; shell
+npm,npm,/usr/bin/npm,shell,T1059,medium,GTFOBins: npm can be used for shell
+nroff,nroff,/usr/bin/nroff,file-read|shell,T1005|T1059,medium,GTFOBins: nroff can be used for file-read; shell
+nsenter,nsenter,/usr/bin/nsenter,shell,T1059,medium,GTFOBins: nsenter can be used for shell
+ntpdate,ntpdate,/usr/bin/ntpdate,file-read,T1005,low,GTFOBins: ntpdate can be used for file-read
+nvim,nvim,/usr/bin/nvim,file-read|inherit,T1005|T1059,medium,GTFOBins: nvim can be used for file-read; inherit
+octave,octave,/usr/bin/octave,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: octave can be used for file-read; file-write; shell
+od,od,/usr/bin/od,file-read,T1005,low,GTFOBins: od can be used for file-read
+opencode,opencode,/usr/bin/opencode,command|inherit,T1059,medium,GTFOBins: opencode can be used for command; inherit
+openssl,openssl,/usr/bin/openssl,download|file-read|file-write|library-load|reverse-shell|upload,T1005|T1048|T1059|T1105|T1565.001|T1574.006,high,GTFOBins: openssl can be used for download; file-read; file-write; library-load; reverse-shell; upload
+openvpn,openvpn,/usr/bin/openvpn,file-read|shell,T1005|T1059,medium,GTFOBins: openvpn can be used for file-read; shell
+openvt,openvt,/usr/bin/openvt,command,T1059,medium,GTFOBins: openvt can be used for command
+opkg,opkg,/usr/bin/opkg,shell,T1059,medium,GTFOBins: opkg can be used for shell
+pandoc,pandoc,/usr/bin/pandoc,file-read|file-write|inherit,T1005|T1059|T1565.001,medium,GTFOBins: pandoc can be used for file-read; file-write; inherit
+passwd,passwd,/usr/bin/passwd,privilege-escalation,T1548,high,GTFOBins: passwd can be used for privilege-escalation
+paste,paste,/usr/bin/paste,file-read,T1005,low,GTFOBins: paste can be used for file-read
+pax,pax,/usr/bin/pax,file-read,T1005,low,GTFOBins: pax can be used for file-read
+pdb,pdb,/usr/bin/pdb,inherit,T1059,medium,GTFOBins: pdb can be used for inherit
+pdflatex,pdflatex,/usr/bin/pdflatex,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: pdflatex can be used for file-read; file-write; shell
+pdftex,pdftex,/usr/bin/pdftex,shell,T1059,medium,GTFOBins: pdftex can be used for shell
+perf,perf,/usr/bin/perf,shell,T1059,medium,GTFOBins: perf can be used for shell
+perl,perl,/usr/bin/perl,download|file-read|reverse-shell|shell|upload,T1005|T1048|T1059|T1105,high,GTFOBins: perl can be used for download; file-read; reverse-shell; shell; upload
+perlbug,perlbug,/usr/bin/perlbug,shell,T1059,medium,GTFOBins: perlbug can be used for shell
+pexec,pexec,/usr/bin/pexec,shell,T1059,medium,GTFOBins: pexec can be used for shell
+pg,pg,/usr/bin/pg,file-read|shell,T1005|T1059,medium,GTFOBins: pg can be used for file-read; shell
+php,php,/usr/bin/php,command|download|file-read|file-write|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001,high,GTFOBins: php can be used for command; download; file-read; file-write; reverse-shell; shell; upload
+pic,pic,/usr/bin/pic,file-read|shell,T1005|T1059,medium,GTFOBins: pic can be used for file-read; shell
+pico,pico,/usr/bin/pico,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: pico can be used for file-read; file-write; shell
+pidstat,pidstat,/usr/bin/pidstat,shell,T1059,medium,GTFOBins: pidstat can be used for shell
+pip,pip,/usr/bin/pip,inherit|shell,T1059,medium,GTFOBins: pip can be used for inherit; shell
+pipx,pipx,/usr/bin/pipx,inherit,T1059,medium,GTFOBins: pipx can be used for inherit
+pkexec,pkexec,/usr/bin/pkexec,shell,T1059,medium,GTFOBins: pkexec can be used for shell
+pkg,pkg,/usr/bin/pkg,command,T1059,medium,GTFOBins: pkg can be used for command
+plymouth,plymouth,/usr/bin/plymouth,shell,T1059,medium,GTFOBins: plymouth can be used for shell
+podman,podman,/usr/bin/podman,shell,T1059,medium,GTFOBins: podman can be used for shell
+poetry,poetry,/usr/bin/poetry,inherit,T1059,medium,GTFOBins: poetry can be used for inherit
+posh,posh,/usr/bin/posh,shell,T1059,medium,GTFOBins: posh can be used for shell
+pr,pr,/usr/bin/pr,file-read,T1005,low,GTFOBins: pr can be used for file-read
+procmail,procmail,/usr/bin/procmail,command,T1059,medium,GTFOBins: procmail can be used for command
+pry,pry,/usr/bin/pry,inherit,T1059,medium,GTFOBins: pry can be used for inherit
+psftp,psftp,/usr/bin/psftp,shell,T1059,medium,GTFOBins: psftp can be used for shell
+psql,psql,/usr/bin/psql,inherit|shell,T1059,medium,GTFOBins: psql can be used for inherit; shell
+ptx,ptx,/usr/bin/ptx,file-read,T1005,low,GTFOBins: ptx can be used for file-read
+puppet,puppet,/usr/bin/puppet,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: puppet can be used for file-read; file-write; shell
+pwsh,pwsh,/usr/bin/pwsh,file-write|shell,T1059|T1565.001,medium,GTFOBins: pwsh can be used for file-write; shell
+pygmentize,pygmentize,/usr/bin/pygmentize,file-read,T1005,low,GTFOBins: pygmentize can be used for file-read
+pyright,pyright,/usr/bin/pyright,file-read,T1005,low,GTFOBins: pyright can be used for file-read
+python,python,/usr/bin/python,download|file-read|file-write|library-load|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001|T1574.006,high,GTFOBins: python can be used for download; file-read; file-write; library-load; reverse-shell; shell; upload
+qpdf,qpdf,/usr/bin/qpdf,file-read,T1005,low,GTFOBins: qpdf can be used for file-read
+r,R,/usr/bin/R,shell,T1059,medium,GTFOBins: R can be used for shell
+rake,rake,/usr/bin/rake,file-read|inherit,T1005|T1059,medium,GTFOBins: rake can be used for file-read; inherit
+ranger,ranger,/usr/bin/ranger,shell,T1059,medium,GTFOBins: ranger can be used for shell
+rc,rc,/usr/bin/rc,shell,T1059,medium,GTFOBins: rc can be used for shell
+readelf,readelf,/usr/bin/readelf,file-read,T1005,low,GTFOBins: readelf can be used for file-read
+red,red,/usr/bin/red,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: red can be used for file-read; file-write; shell
+redcarpet,redcarpet,/usr/bin/redcarpet,file-read,T1005,low,GTFOBins: redcarpet can be used for file-read
+redis,redis,/usr/bin/redis,file-write,T1565.001,medium,GTFOBins: redis can be used for file-write
+restic,restic,/usr/bin/restic,command|shell|upload,T1048|T1059,medium,GTFOBins: restic can be used for command; shell; upload
+rev,rev,/usr/bin/rev,file-read,T1005,low,GTFOBins: rev can be used for file-read
+rlogin,rlogin,/usr/bin/rlogin,upload,T1048,medium,GTFOBins: rlogin can be used for upload
+rlwrap,rlwrap,/usr/bin/rlwrap,file-write|shell,T1059|T1565.001,medium,GTFOBins: rlwrap can be used for file-write; shell
+rpm,rpm,/usr/bin/rpm,command|inherit|shell,T1059,medium,GTFOBins: rpm can be used for command; inherit; shell
+rpmdb,rpmdb,/usr/bin/rpmdb,inherit|shell,T1059,medium,GTFOBins: rpmdb can be used for inherit; shell
+rpmquery,rpmquery,/usr/bin/rpmquery,inherit|shell,T1059,medium,GTFOBins: rpmquery can be used for inherit; shell
+rpmverify,rpmverify,/usr/bin/rpmverify,inherit|shell,T1059,medium,GTFOBins: rpmverify can be used for inherit; shell
+rsync,rsync,/usr/bin/rsync,shell,T1059,medium,GTFOBins: rsync can be used for shell
+rsyslogd,rsyslogd,/usr/bin/rsyslogd,command,T1059,medium,GTFOBins: rsyslogd can be used for command
+rtorrent,rtorrent,/usr/bin/rtorrent,shell,T1059,medium,GTFOBins: rtorrent can be used for shell
+ruby,ruby,/usr/bin/ruby,download|file-read|file-write|library-load|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001|T1574.006,high,GTFOBins: ruby can be used for download; file-read; file-write; library-load; reverse-shell; shell; upload
+run-mailcap,run-mailcap,/usr/bin/run-mailcap,inherit,T1059,medium,GTFOBins: run-mailcap can be used for inherit
+run-parts,run-parts,/usr/bin/run-parts,shell,T1059,medium,GTFOBins: run-parts can be used for shell
+runscript,runscript,/usr/bin/runscript,shell,T1059,medium,GTFOBins: runscript can be used for shell
+rustc,rustc,/usr/bin/rustc,file-read|file-write|inherit,T1005|T1059|T1565.001,medium,GTFOBins: rustc can be used for file-read; file-write; inherit
+rustdoc,rustdoc,/usr/bin/rustdoc,file-read|file-write,T1005|T1565.001,medium,GTFOBins: rustdoc can be used for file-read; file-write
+rustfmt,rustfmt,/usr/bin/rustfmt,file-read,T1005,low,GTFOBins: rustfmt can be used for file-read
+rustup,rustup,/usr/bin/rustup,command|shell,T1059,medium,GTFOBins: rustup can be used for command; shell
+rvim,rvim,/usr/bin/rvim,file-read|inherit,T1005|T1059,medium,GTFOBins: rvim can be used for file-read; inherit
+sash,sash,/usr/bin/sash,shell,T1059,medium,GTFOBins: sash can be used for shell
+scanmem,scanmem,/usr/bin/scanmem,shell,T1059,medium,GTFOBins: scanmem can be used for shell
+scp,scp,/usr/bin/scp,download|shell|upload,T1048|T1059|T1105,medium,GTFOBins: scp can be used for download; shell; upload
+screen,screen,/usr/bin/screen,file-write|shell,T1059|T1565.001,medium,GTFOBins: screen can be used for file-write; shell
+script,script,/usr/bin/script,file-write|shell,T1059|T1565.001,medium,GTFOBins: script can be used for file-write; shell
+scrot,scrot,/usr/bin/scrot,shell,T1059,medium,GTFOBins: scrot can be used for shell
+sed,sed,/usr/bin/sed,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: sed can be used for file-read; file-write; shell
+service,service,/usr/bin/service,shell,T1059,medium,GTFOBins: service can be used for shell
+setarch,setarch,/usr/bin/setarch,shell,T1059,medium,GTFOBins: setarch can be used for shell
+setcap,setcap,/usr/bin/setcap,privilege-escalation,T1548,high,GTFOBins: setcap can be used for privilege-escalation
+setfacl,setfacl,/usr/bin/setfacl,privilege-escalation,T1548,high,GTFOBins: setfacl can be used for privilege-escalation
+setlock,setlock,/usr/bin/setlock,shell,T1059,medium,GTFOBins: setlock can be used for shell
+sftp,sftp,/usr/bin/sftp,download|shell|upload,T1048|T1059|T1105,medium,GTFOBins: sftp can be used for download; shell; upload
+sg,sg,/usr/bin/sg,shell,T1059,medium,GTFOBins: sg can be used for shell
+shred,shred,/usr/bin/shred,file-write,T1565.001,medium,GTFOBins: shred can be used for file-write
+shuf,shuf,/usr/bin/shuf,file-read|file-write,T1005|T1565.001,medium,GTFOBins: shuf can be used for file-read; file-write
+slsh,slsh,/usr/bin/slsh,shell,T1059,medium,GTFOBins: slsh can be used for shell
+smbclient,smbclient,/usr/bin/smbclient,download|shell|upload,T1048|T1059|T1105,medium,GTFOBins: smbclient can be used for download; shell; upload
+snap,snap,/usr/bin/snap,command,T1059,medium,GTFOBins: snap can be used for command
+socat,socat,/usr/bin/socat,bind-shell|download|file-read|file-write|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001,high,GTFOBins: socat can be used for bind-shell; download; file-read; file-write; reverse-shell; shell; upload
+socket,socket,/usr/bin/socket,bind-shell|reverse-shell,T1059,high,GTFOBins: socket can be used for bind-shell; reverse-shell
+soelim,soelim,/usr/bin/soelim,file-read,T1005,low,GTFOBins: soelim can be used for file-read
+softlimit,softlimit,/usr/bin/softlimit,shell,T1059,medium,GTFOBins: softlimit can be used for shell
+sort,sort,/usr/bin/sort,file-read|file-write,T1005|T1565.001,medium,GTFOBins: sort can be used for file-read; file-write
+split,split,/usr/bin/split,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: split can be used for file-read; file-write; shell
+sqlite3,sqlite3,/usr/bin/sqlite3,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: sqlite3 can be used for file-read; file-write; shell
+sqlmap,sqlmap,/usr/bin/sqlmap,inherit,T1059,medium,GTFOBins: sqlmap can be used for inherit
+ss,ss,/usr/bin/ss,file-read,T1005,low,GTFOBins: ss can be used for file-read
+ssh,ssh,/usr/bin/ssh,download|file-read|shell|upload,T1005|T1048|T1059|T1105,medium,GTFOBins: ssh can be used for download; file-read; shell; upload
+ssh-agent,ssh-agent,/usr/bin/ssh-agent,shell,T1059,medium,GTFOBins: ssh-agent can be used for shell
+ssh-copy-id,ssh-copy-id,/usr/bin/ssh-copy-id,file-read|file-write,T1005|T1565.001,medium,GTFOBins: ssh-copy-id can be used for file-read; file-write
+ssh-keygen,ssh-keygen,/usr/bin/ssh-keygen,library-load,T1574.006,high,GTFOBins: ssh-keygen can be used for library-load
+ssh-keyscan,ssh-keyscan,/usr/bin/ssh-keyscan,file-read,T1005,low,GTFOBins: ssh-keyscan can be used for file-read
+sshfs,sshfs,/usr/bin/sshfs,command|download|shell|upload,T1048|T1059|T1105,medium,GTFOBins: sshfs can be used for command; download; shell; upload
+sshpass,sshpass,/usr/bin/sshpass,shell,T1059,medium,GTFOBins: sshpass can be used for shell
+sshuttle,sshuttle,/usr/bin/sshuttle,shell,T1059,medium,GTFOBins: sshuttle can be used for shell
+start-stop-daemon,start-stop-daemon,/usr/bin/start-stop-daemon,shell,T1059,medium,GTFOBins: start-stop-daemon can be used for shell
+stdbuf,stdbuf,/usr/bin/stdbuf,shell,T1059,medium,GTFOBins: stdbuf can be used for shell
+strace,strace,/usr/bin/strace,file-write|shell,T1059|T1565.001,medium,GTFOBins: strace can be used for file-write; shell
+strings,strings,/usr/bin/strings,file-read,T1005,low,GTFOBins: strings can be used for file-read
+su,su,/usr/bin/su,shell,T1059,medium,GTFOBins: su can be used for shell
+sudo,sudo,/usr/bin/sudo,shell,T1059,medium,GTFOBins: sudo can be used for shell
+sysctl,sysctl,/usr/bin/sysctl,command|file-read,T1005|T1059,medium,GTFOBins: sysctl can be used for command; file-read
+systemctl,systemctl,/usr/bin/systemctl,inherit|shell,T1059,medium,GTFOBins: systemctl can be used for inherit; shell
+systemd-resolve,systemd-resolve,/usr/bin/systemd-resolve,inherit,T1059,medium,GTFOBins: systemd-resolve can be used for inherit
+systemd-run,systemd-run,/usr/bin/systemd-run,command|shell,T1059,medium,GTFOBins: systemd-run can be used for command; shell
+tac,tac,/usr/bin/tac,file-read,T1005,low,GTFOBins: tac can be used for file-read
+tail,tail,/usr/bin/tail,file-read,T1005,low,GTFOBins: tail can be used for file-read
+tailscale,tailscale,/usr/bin/tailscale,upload,T1048,medium,GTFOBins: tailscale can be used for upload
+tar,tar,/usr/bin/tar,download|file-read|file-write|shell|upload,T1005|T1048|T1059|T1105|T1565.001,medium,GTFOBins: tar can be used for download; file-read; file-write; shell; upload
+task,task,/usr/bin/task,shell,T1059,medium,GTFOBins: task can be used for shell
+taskset,taskset,/usr/bin/taskset,shell,T1059,medium,GTFOBins: taskset can be used for shell
+tasksh,tasksh,/usr/bin/tasksh,shell,T1059,medium,GTFOBins: tasksh can be used for shell
+tbl,tbl,/usr/bin/tbl,file-read,T1005,low,GTFOBins: tbl can be used for file-read
+tclsh,tclsh,/usr/bin/tclsh,library-load|reverse-shell|shell,T1059|T1574.006,high,GTFOBins: tclsh can be used for library-load; reverse-shell; shell
+tcpdump,tcpdump,/usr/bin/tcpdump,command|file-write,T1059|T1565.001,medium,GTFOBins: tcpdump can be used for command; file-write
+tcsh,tcsh,/usr/bin/tcsh,file-write|shell,T1059|T1565.001,medium,GTFOBins: tcsh can be used for file-write; shell
+tdbtool,tdbtool,/usr/bin/tdbtool,shell,T1059,medium,GTFOBins: tdbtool can be used for shell
+tee,tee,/usr/bin/tee,file-write,T1565.001,medium,GTFOBins: tee can be used for file-write
+telnet,telnet,/usr/bin/telnet,reverse-shell|shell,T1059,high,GTFOBins: telnet can be used for reverse-shell; shell
+terraform,terraform,/usr/bin/terraform,file-read,T1005,low,GTFOBins: terraform can be used for file-read
+tex,tex,/usr/bin/tex,shell,T1059,medium,GTFOBins: tex can be used for shell
+tftp,tftp,/usr/bin/tftp,download|upload,T1048|T1105,medium,GTFOBins: tftp can be used for download; upload
+tic,tic,/usr/bin/tic,file-read,T1005,low,GTFOBins: tic can be used for file-read
+time,time,/usr/bin/time,shell,T1059,medium,GTFOBins: time can be used for shell
+timedatectl,timedatectl,/usr/bin/timedatectl,inherit,T1059,medium,GTFOBins: timedatectl can be used for inherit
+timeout,timeout,/usr/bin/timeout,shell,T1059,medium,GTFOBins: timeout can be used for shell
+tmate,tmate,/usr/bin/tmate,shell,T1059,medium,GTFOBins: tmate can be used for shell
+tmux,tmux,/usr/bin/tmux,file-read|shell,T1005|T1059,medium,GTFOBins: tmux can be used for file-read; shell
+top,top,/usr/bin/top,shell,T1059,medium,GTFOBins: top can be used for shell
+torify,torify,/usr/bin/torify,shell,T1059,medium,GTFOBins: torify can be used for shell
+torsocks,torsocks,/usr/bin/torsocks,shell,T1059,medium,GTFOBins: torsocks can be used for shell
+troff,troff,/usr/bin/troff,file-read,T1005,low,GTFOBins: troff can be used for file-read
+tsc,tsc,/usr/bin/tsc,file-read|file-write,T1005|T1565.001,medium,GTFOBins: tsc can be used for file-read; file-write
+tshark,tshark,/usr/bin/tshark,inherit,T1059,medium,GTFOBins: tshark can be used for inherit
+ul,ul,/usr/bin/ul,file-read,T1005,low,GTFOBins: ul can be used for file-read
+unexpand,unexpand,/usr/bin/unexpand,file-read,T1005,low,GTFOBins: unexpand can be used for file-read
+uniq,uniq,/usr/bin/uniq,file-read,T1005,low,GTFOBins: uniq can be used for file-read
+unshare,unshare,/usr/bin/unshare,shell,T1059,medium,GTFOBins: unshare can be used for shell
+unsquashfs,unsquashfs,/usr/bin/unsquashfs,privilege-escalation,T1548,high,GTFOBins: unsquashfs can be used for privilege-escalation
+unzip,unzip,/usr/bin/unzip,privilege-escalation,T1548,high,GTFOBins: unzip can be used for privilege-escalation
+update-alternatives,update-alternatives,/usr/bin/update-alternatives,file-write,T1565.001,medium,GTFOBins: update-alternatives can be used for file-write
+urlget,urlget,/usr/bin/urlget,file-read,T1005,low,GTFOBins: urlget can be used for file-read
+uuencode,uuencode,/usr/bin/uuencode,file-read,T1005,low,GTFOBins: uuencode can be used for file-read
+uv,uv,/usr/bin/uv,shell,T1059,medium,GTFOBins: uv can be used for shell
+vagrant,vagrant,/usr/bin/vagrant,inherit,T1059,medium,GTFOBins: vagrant can be used for inherit
+valgrind,valgrind,/usr/bin/valgrind,shell,T1059,medium,GTFOBins: valgrind can be used for shell
+varnishncsa,varnishncsa,/usr/bin/varnishncsa,file-write,T1565.001,medium,GTFOBins: varnishncsa can be used for file-write
+vi,vi,/usr/bin/vi,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: vi can be used for file-read; file-write; shell
+view,view,/usr/bin/view,file-read|inherit,T1005|T1059,medium,GTFOBins: view can be used for file-read; inherit
+vigr,vigr,/usr/bin/vigr,inherit,T1059,medium,GTFOBins: vigr can be used for inherit
+vim,vim,/usr/bin/vim,file-read|inherit,T1005|T1059,medium,GTFOBins: vim can be used for file-read; inherit
+vimdiff,vimdiff,/usr/bin/vimdiff,file-read|inherit,T1005|T1059,medium,GTFOBins: vimdiff can be used for file-read; inherit
+vipw,vipw,/usr/bin/vipw,inherit,T1059,medium,GTFOBins: vipw can be used for inherit
+virsh,virsh,/usr/bin/virsh,command|file-write,T1059|T1565.001,medium,GTFOBins: virsh can be used for command; file-write
+volatility,volatility,/usr/bin/volatility,inherit,T1059,medium,GTFOBins: volatility can be used for inherit
+w3m,w3m,/usr/bin/w3m,file-read,T1005,low,GTFOBins: w3m can be used for file-read
+wall,wall,/usr/bin/wall,file-read,T1005,low,GTFOBins: wall can be used for file-read
+watch,watch,/usr/bin/watch,shell,T1059,medium,GTFOBins: watch can be used for shell
+wc,wc,/usr/bin/wc,file-read,T1005,low,GTFOBins: wc can be used for file-read
+wg-quick,wg-quick,/usr/bin/wg-quick,shell,T1059,medium,GTFOBins: wg-quick can be used for shell
+wget,wget,/usr/bin/wget,download|file-read|file-write|shell|upload,T1005|T1048|T1059|T1105|T1565.001,medium,GTFOBins: wget can be used for download; file-read; file-write; shell; upload
+whiptail,whiptail,/usr/bin/whiptail,file-read,T1005,low,GTFOBins: whiptail can be used for file-read
+whois,whois,/usr/bin/whois,download|upload,T1048|T1105,medium,GTFOBins: whois can be used for download; upload
+wireshark,wireshark,/usr/bin/wireshark,file-write|inherit,T1059|T1565.001,medium,GTFOBins: wireshark can be used for file-write; inherit
+wish,wish,/usr/bin/wish,inherit,T1059,medium,GTFOBins: wish can be used for inherit
+xargs,xargs,/usr/bin/xargs,file-read|shell,T1005|T1059,medium,GTFOBins: xargs can be used for file-read; shell
+xdg-user-dir,xdg-user-dir,/usr/bin/xdg-user-dir,shell,T1059,medium,GTFOBins: xdg-user-dir can be used for shell
+xdotool,xdotool,/usr/bin/xdotool,shell,T1059,medium,GTFOBins: xdotool can be used for shell
+xelatex,xelatex,/usr/bin/xelatex,file-read|file-write|shell,T1005|T1059|T1565.001,medium,GTFOBins: xelatex can be used for file-read; file-write; shell
+xetex,xetex,/usr/bin/xetex,shell,T1059,medium,GTFOBins: xetex can be used for shell
+xmodmap,xmodmap,/usr/bin/xmodmap,file-read,T1005,low,GTFOBins: xmodmap can be used for file-read
+xmore,xmore,/usr/bin/xmore,file-read,T1005,low,GTFOBins: xmore can be used for file-read
+xpad,xpad,/usr/bin/xpad,file-read,T1005,low,GTFOBins: xpad can be used for file-read
+xxd,xxd,/usr/bin/xxd,file-read|file-write,T1005|T1565.001,medium,GTFOBins: xxd can be used for file-read; file-write
+xz,xz,/usr/bin/xz,file-read,T1005,low,GTFOBins: xz can be used for file-read
+yarn,yarn,/usr/bin/yarn,shell,T1059,medium,GTFOBins: yarn can be used for shell
+yash,yash,/usr/bin/yash,shell,T1059,medium,GTFOBins: yash can be used for shell
+yelp,yelp,/usr/bin/yelp,file-read,T1005,low,GTFOBins: yelp can be used for file-read
+yt-dlp,yt-dlp,/usr/bin/yt-dlp,shell,T1059,medium,GTFOBins: yt-dlp can be used for shell
+yum,yum,/usr/bin/yum,command|download|inherit,T1059|T1105,medium,GTFOBins: yum can be used for command; download; inherit
+zathura,zathura,/usr/bin/zathura,shell,T1059,medium,GTFOBins: zathura can be used for shell
+zcat,zcat,/usr/bin/zcat,file-read,T1005,low,GTFOBins: zcat can be used for file-read
+zgrep,zgrep,/usr/bin/zgrep,file-read,T1005,low,GTFOBins: zgrep can be used for file-read
+zic,zic,/usr/bin/zic,command,T1059,medium,GTFOBins: zic can be used for command
+zip,zip,/usr/bin/zip,file-read|shell,T1005|T1059,medium,GTFOBins: zip can be used for file-read; shell
+zless,zless,/usr/bin/zless,inherit,T1059,medium,GTFOBins: zless can be used for inherit
+zsh,zsh,/usr/bin/zsh,download|file-read|file-write|inherit|reverse-shell|shell|upload,T1005|T1048|T1059|T1105|T1565.001,high,GTFOBins: zsh can be used for download; file-read; file-write; inherit; reverse-shell; shell; upload
+zsoelim,zsoelim,/usr/bin/zsoelim,file-read,T1005,low,GTFOBins: zsoelim can be used for file-read
+zypper,zypper,/usr/bin/zypper,shell,T1059,medium,GTFOBins: zypper can be used for shell

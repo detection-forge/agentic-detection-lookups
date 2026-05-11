@@ -14,10 +14,11 @@ A collection of structured CSV lookup files purpose-built for:
 
 ## Lookup Files
 
-| File | Entries | Description |
-|------|---------|-------------|
-| [`lolbas_binaries.csv`](lookups/lolbas_binaries.csv) | 232 | Living Off The Land Binaries and Scripts — risk-scored, categorized, MITRE-mapped |
-| [`parent_child_baselines.csv`](lookups/parent_child_baselines.csv) | 97 | Expected/suspicious process parent→child relationships for Windows and Linux |
+| File | Entries | OS | Description |
+|------|---------|-----|-------------|
+| [`lolbas_binaries.csv`](lookups/lolbas_binaries.csv) | 232 | Windows | Living Off The Land Binaries and Scripts — risk-scored, categorized, MITRE-mapped |
+| [`gtfobins.csv`](lookups/gtfobins.csv) | 477 | Linux | GTFOBins Unix binaries — shell escape, priv-esc, file ops, MITRE-mapped |
+| [`parent_child_baselines.csv`](lookups/parent_child_baselines.csv) | 97 | Both | Expected/suspicious process parent→child relationships for Windows and Linux |
 
 ### Schema Contract
 
@@ -84,7 +85,10 @@ See [`queries/`](queries/) for full query libraries per platform.
 Then your agent can:
 ```
 → lookup_binary("certutil.exe")
-← {risk: "medium", categories: ["Download"], mitre_ids: ["T1105"]}
+← {source: "lolbas", risk: "medium", categories: ["Download"], mitre_ids: ["T1105"]}
+
+→ lookup_binary("python")
+← {source: "gtfobins", risk: "high", categories: ["shell", "reverse-shell", ...], mitre_ids: ["T1059"]}
 
 → check_parent_child("winword.exe", "cmd.exe")
 ← {expected: false, risk_if_unexpected: "critical", mitre_id: "T1204.002"}
@@ -94,10 +98,10 @@ Then your agent can:
 
 | Tool | Input | Output |
 |------|-------|--------|
-| `lookup_binary` | filename | Risk, categories, MITRE IDs, description |
+| `lookup_binary` | filename | Risk, categories, MITRE IDs, source (lolbas/gtfobins) |
 | `check_parent_child` | parent, child | Expected/suspicious, risk level, triage guidance |
-| `list_by_category` | category name | All binaries in that abuse category |
-| `list_by_mitre` | technique ID | All binaries mapped to that technique |
+| `list_by_category` | category name | All binaries in that abuse category (cross-platform) |
+| `list_by_mitre` | technique ID | All binaries mapped to that technique (cross-platform) |
 | `search_lookups` | free text | Matches across all lookup data |
 | `list_available_lookups` | — | All files with row counts and columns |
 
@@ -105,8 +109,7 @@ Then your agent can:
 
 | Lookup | Source | Update Frequency |
 |--------|--------|-----------------|
-| LOLBAS binaries | [LOLBAS Project](https://lolbas-project.github.io) | Weekly (automated) |
-| Parent-child baselines | MITRE ATT&CK, SANS, Microsoft docs, public threat reports | Manual curation |
+| LOLBAS binaries | [LOLBAS Project](https://lolbas-project.github.io) | Weekly (automated) || GTFOBins | [GTFOBins](https://gtfobins.github.io) | Weekly (automated) || Parent-child baselines | MITRE ATT&CK, SANS, Microsoft docs, public threat reports | Manual curation |
 
 ## Installation
 
@@ -190,6 +193,7 @@ This starts the MCP server on stdio transport (useful for piping JSON-RPC or con
 agentic-detection-lookups/
 ├── lookups/                    # The data (CSV files)
 │   ├── lolbas_binaries.csv
+│   ├── gtfobins.csv
 │   └── parent_child_baselines.csv
 ├── queries/                    # Copy-paste detection queries
 │   ├── crowdstrike_ngsiem.md
