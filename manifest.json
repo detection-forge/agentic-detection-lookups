@@ -21,27 +21,27 @@
   },
   "tools": [
     {
-      "name": "lookup_binary",
+      "name": "detection_lookup_binary",
       "description": "Check if a binary is a known LOLBAS (Windows) or GTFOBins (Linux) living-off-the-land binary. Returns risk, categories, and MITRE ATT&CK mappings."
     },
     {
-      "name": "check_parent_child",
+      "name": "detection_check_parent_child",
       "description": "Check if a process parent-child relationship is expected or suspicious (e.g., winword.exe spawning cmd.exe)."
     },
     {
-      "name": "list_by_category",
-      "description": "List all binaries in a specific abuse category (e.g., Execute, shell, reverse-shell, Download)."
+      "name": "detection_list_by_category",
+      "description": "List all binaries in a specific abuse category (e.g., Execute, shell, reverse-shell, Download). Supports pagination."
     },
     {
-      "name": "list_by_mitre",
-      "description": "List all binaries mapped to a specific MITRE ATT&CK technique (e.g., T1218, T1059, T1105)."
+      "name": "detection_list_by_mitre",
+      "description": "List all binaries mapped to a specific MITRE ATT&CK technique (e.g., T1218, T1059, T1105). Supports pagination."
     },
     {
-      "name": "search_lookups",
-      "description": "Free-text search across all lookup files (LOLBAS, GTFOBins, parent-child baselines)."
+      "name": "detection_search",
+      "description": "Free-text search across all lookup files (LOLBAS, GTFOBins, parent-child baselines). Returns total count and has_more flag."
     },
     {
-      "name": "list_available_lookups",
+      "name": "detection_list_lookups",
       "description": "List all available lookup files with row counts and column schemas."
     }
   ],

@@ -84,13 +84,13 @@ See [`queries/`](queries/) for full query libraries per platform.
 
 Then your agent can:
 ```
-→ lookup_binary("certutil.exe")
+→ detection_lookup_binary("certutil.exe")
 ← {source: "lolbas", risk: "medium", categories: ["Download"], mitre_ids: ["T1105"]}
 
-→ lookup_binary("python")
+→ detection_lookup_binary("python")
 ← {source: "gtfobins", risk: "high", categories: ["shell", "reverse-shell", ...], mitre_ids: ["T1059"]}
 
-→ check_parent_child("winword.exe", "cmd.exe")
+→ detection_check_parent_child("winword.exe", "cmd.exe")
 ← {expected: false, risk_if_unexpected: "critical", mitre_id: "T1204.002"}
 ```
 
@@ -98,12 +98,12 @@ Then your agent can:
 
 | Tool | Input | Output |
 |------|-------|--------|
-| `lookup_binary` | filename | Risk, categories, MITRE IDs, source (lolbas/gtfobins) |
-| `check_parent_child` | parent, child | Expected/suspicious, risk level, triage guidance |
-| `list_by_category` | category name | All binaries in that abuse category (cross-platform) |
-| `list_by_mitre` | technique ID | All binaries mapped to that technique (cross-platform) |
-| `search_lookups` | free text | Matches across all lookup data |
-| `list_available_lookups` | — | All files with row counts and columns |
+| `detection_lookup_binary` | filename | Risk, categories, MITRE IDs, source (lolbas/gtfobins) |
+| `detection_check_parent_child` | parent, child, os_filter | Expected/suspicious, risk level, triage guidance |
+| `detection_list_by_category` | category, limit, offset | Paginated binaries in that abuse category (cross-platform) |
+| `detection_list_by_mitre` | technique_id, limit, offset | Paginated binaries mapped to that technique (cross-platform) |
+| `detection_search` | query, limit | Matches across all lookup data with total/has_more |
+| `detection_list_lookups` | — | All files with row counts and columns |
 
 ## Data Sources
 
