@@ -105,6 +105,8 @@ mpcmdrun.exe,MpCmdRun.exe,C:\ProgramData\Microsoft\Windows Defender\Platform\4.1
 mpiexec.exe,Mpiexec.exe,C:\Program Files\Microsoft MPI\Bin\mpiexec.exe,Execute,T1127,high,Command-line tool for running Message Passing Interface (MPI) applications.
 msaccess.exe,MSAccess.exe,C:\Program Files (x86)\Microsoft Office 16\ClientX86\Root\Office16\MSAccess.exe,Download,T1105,medium,Microsoft Office component
 msbuild.exe,Msbuild.exe,C:\Windows\Microsoft.NET\Framework\v2.0.50727\Msbuild.exe,AWL Bypass|Execute,T1036|T1127.001,high,Used to compile and execute code
+mscopilot.exe,Mscopilot.exe,C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilot.exe,Execute,T1218.015,high,Microsoft Copilot app
+mscopilot_proxy.exe,Mscopilot_proxy.exe,C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilot_proxy.exe,Execute,T1218.015,high,Microsoft Copilot proxy launcher
 msconfig.exe,Msconfig.exe,C:\Windows\System32\msconfig.exe,Execute,T1218,high,MSConfig is a troubleshooting tool which is used to temporarily disable or re-enable software; device drivers or Windows services that run during startup process to help the user determine the cause of a problem with Windows
 msdeploy.exe,Msdeploy.exe,C:\Program Files\IIS\Microsoft Web Deploy V2\msdeploy.exe,AWL Bypass|Copy|Execute,T1105|T1218,high,Microsoft tool used to deploy Web Applications.
 msdt.exe,Msdt.exe,C:\Windows\System32\Msdt.exe,AWL Bypass|Execute,T1202|T1218,high,Microsoft diagnostics tool
