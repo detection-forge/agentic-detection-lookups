@@ -16,9 +16,9 @@ A collection of structured CSV lookup files purpose-built for:
 
 | File | Entries | OS | Description |
 |------|---------|-----|-------------|
-| [`lolbas_binaries.csv`](lookups/lolbas_binaries.csv) | 232 | Windows | Living Off The Land Binaries and Scripts — risk-scored, categorized, MITRE-mapped |
+| [`lolbas_binaries.csv`](lookups/lolbas_binaries.csv) | 234 | Windows | Living Off The Land Binaries and Scripts — risk-scored, categorized, MITRE-mapped |
 | [`gtfobins.csv`](lookups/gtfobins.csv) | 477 | Linux | GTFOBins Unix binaries — shell escape, priv-esc, file ops, MITRE-mapped |
-| [`parent_child_baselines.csv`](lookups/parent_child_baselines.csv) | 97 | Both | Expected/suspicious process parent→child relationships for Windows and Linux |
+| [`parent_child_baselines.csv`](lookups/parent_child_baselines.csv) | 98 | Both | Expected/suspicious process parent→child relationships for Windows and Linux |
 
 ### Schema Contract
 
