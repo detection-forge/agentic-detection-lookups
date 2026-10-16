@@ -4,7 +4,7 @@
   "display_name": "Detection Lookups",
   "version": "0.1.0",
   "description": "Machine-readable detection lookups for SIEM enrichment and AI agents. Check LOLBAS (Windows), GTFOBins (Linux), and process parent-child baselines via MCP tools.",
-  "long_description": "Query 800+ LOLBAS and GTFOBins binaries plus 97 parent-child process baselines without embedding data in prompts. Look up any binary to get risk level, abuse categories, and MITRE ATT&CK mappings. Search by category, MITRE technique, or free text. Purpose-built for detection engineering, threat hunting, and SOC automation.",
+  "long_description": "Query 700+ LOLBAS and GTFOBins binaries plus 98 parent-child process baselines without embedding data in prompts. Look up any binary to get risk level, abuse categories, and MITRE ATT&CK mappings. Search by category, MITRE technique, or free text. Purpose-built for detection engineering, threat hunting, and SOC automation.",
   "author": {
     "name": "Gene Kazimiarovich",
     "url": "https://github.com/detection-forge"
